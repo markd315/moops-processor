@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project
-Thu Nov 29 17:31:35 2018
+Thu Nov 29 18:05:08 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -21,7 +21,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  13. Registers Removed During Synthesis
  14. General Register Statistics
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated
+ 16. Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_flr3:auto_generated
  17. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0
  18. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1
  19. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport
@@ -88,15 +88,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 29 17:31:35 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 29 18:05:08 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Project                                     ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,905                                       ;
-;     Total combinational functions  ; 2,815                                       ;
-;     Dedicated logic registers      ; 1,291                                       ;
-; Total registers                    ; 1291                                        ;
+; Total logic elements               ; 3,923                                       ;
+;     Total combinational functions  ; 2,832                                       ;
+;     Dedicated logic registers      ; 1,292                                       ;
+; Total registers                    ; 1292                                        ;
 ; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
@@ -237,8 +237,8 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_elr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_elr3.tdf                   ;         ;
-; testcase1.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/18.0/4712/Project/testcase1.mif                            ;         ;
+; db/altsyncram_flr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_flr3.tdf                   ;         ;
+; testcase2.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/18.0/4712/Project/testcase2.mif                            ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
@@ -254,20 +254,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,905     ;
+; Estimated Total logic elements              ; 3,923     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2815      ;
+; Total combinational functions               ; 2832      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2179      ;
-;     -- 3 input functions                    ; 526       ;
-;     -- <=2 input functions                  ; 110       ;
+;     -- 4 input functions                    ; 2202      ;
+;     -- 3 input functions                    ; 514       ;
+;     -- <=2 input functions                  ; 116       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2524      ;
+;     -- normal mode                          ; 2541      ;
 ;     -- arithmetic mode                      ; 291       ;
 ;                                             ;           ;
-; Total registers                             ; 1291      ;
-;     -- Dedicated logic registers            ; 1291      ;
+; Total registers                             ; 1292      ;
+;     -- Dedicated logic registers            ; 1292      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 45        ;
@@ -276,8 +276,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 16        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1323      ;
-; Total fan-out                               ; 16098     ;
+; Maximum fan-out                             ; 1324      ;
+; Total fan-out                               ; 16169     ;
 ; Average fan-out                             ; 3.79      ;
 +---------------------------------------------+-----------+
 
@@ -287,26 +287,26 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name     ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                         ; 2815 (2)            ; 1291 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
-;    |ctrler:controller|                             ; 2813 (16)           ; 1291 (11)                 ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
-;       |datapath:dp|                                ; 2797 (6)            ; 1280 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
+; |top_level                                         ; 2832 (2)            ; 1292 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
+;    |ctrler:controller|                             ; 2830 (18)           ; 1292 (12)                 ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
+;       |datapath:dp|                                ; 2812 (7)            ; 1280 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
 ;          |ALUcontroller:alucard|                   ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
 ;          |Memory:Memmy|                            ; 118 (68)            ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
 ;             |LARams:Rammy|                         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy                                                                ; LARams          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;                   |altsyncram_elr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated ; altsyncram_elr3 ; work         ;
+;                   |altsyncram_flr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_flr3:auto_generated ; altsyncram_flr3 ; work         ;
 ;             |bus_latch:Inport0|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Inport1|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Outputport|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport                                                        ; bus_latch       ; work         ;
-;          |alu_ns:ALU|                              ; 1023 (852)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
+;          |alu_ns:ALU|                              ; 1033 (862)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
 ;             |lpm_mult:Mult0|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0                                                                ; lpm_mult        ; work         ;
 ;                |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                        ; mult_tns        ; work         ;
 ;             |lpm_mult:Mult1|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1                                                                ; lpm_mult        ; work         ;
 ;                |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1|mult_qgs:auto_generated                                        ; mult_qgs        ; work         ;
 ;          |bus_latch:PClatch|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|bus_latch:PClatch                                                                        ; bus_latch       ; work         ;
-;          |genmux4:PCsourceMux|                     ; 67 (67)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
+;          |genmux4:PCsourceMux|                     ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
 ;          |genmux4:input2mux|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
-;          |genmux:PCmux|                            ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
+;          |genmux:PCmux|                            ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
 ;          |genmux:WRdataMux|                        ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux                                                                         ; genmux          ; work         ;
 ;          |genmux:WRregMux|                         ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRregMux                                                                          ; genmux          ; work         ;
 ;          |genmux:input1mux|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:input1mux                                                                         ; genmux          ; work         ;
@@ -327,7 +327,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
 ; Name                                                                                                                              ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF           ;
 +-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
-; ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; TestCase1.mif ;
+; ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_flr3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; TestCase2.mif ;
 +-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
 
 
@@ -359,23 +359,24 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|ctrler:controller|state                                                                                                                                                                              ;
-+----------------------+--------------------+----------------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
-; Name                 ; state.jumpComplete ; state.branchComplete ; state.rComplete ; state.exec ; state.readComplete ; state.memAccessW ; state.memAccessR ; state.memAddr ; state.iDecode ; state.iFetchInc ; state.iFetchRead ;
-+----------------------+--------------------+----------------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
-; state.iFetchRead     ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 0                ;
-; state.iFetchInc      ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 1               ; 1                ;
-; state.iDecode        ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 1             ; 0               ; 1                ;
-; state.memAddr        ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 1             ; 0             ; 0               ; 1                ;
-; state.memAccessR     ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 1                ; 0             ; 0             ; 0               ; 1                ;
-; state.memAccessW     ; 0                  ; 0                    ; 0               ; 0          ; 0                  ; 1                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.readComplete   ; 0                  ; 0                    ; 0               ; 0          ; 1                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.exec           ; 0                  ; 0                    ; 0               ; 1          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.rComplete      ; 0                  ; 0                    ; 1               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.branchComplete ; 0                  ; 1                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.jumpComplete   ; 1                  ; 0                    ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-+----------------------+--------------------+----------------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|ctrler:controller|state                                                                                                                                                                                             ;
++----------------------+--------------------+----------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
+; Name                 ; state.jumpComplete ; state.branchComplete ; state.rWrite ; state.rComplete ; state.exec ; state.readComplete ; state.memAccessW ; state.memAccessR ; state.memAddr ; state.iDecode ; state.iFetchInc ; state.iFetchRead ;
++----------------------+--------------------+----------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
+; state.iFetchRead     ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 0                ;
+; state.iFetchInc      ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 1               ; 1                ;
+; state.iDecode        ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 1             ; 0               ; 1                ;
+; state.memAddr        ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 1             ; 0             ; 0               ; 1                ;
+; state.memAccessR     ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 1                ; 0             ; 0             ; 0               ; 1                ;
+; state.memAccessW     ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 1                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.readComplete   ; 0                  ; 0                    ; 0            ; 0               ; 0          ; 1                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.exec           ; 0                  ; 0                    ; 0            ; 0               ; 1          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.rComplete      ; 0                  ; 0                    ; 0            ; 1               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.rWrite         ; 0                  ; 0                    ; 1            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.branchComplete ; 0                  ; 1                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
+; state.jumpComplete   ; 1                  ; 0                    ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
++----------------------+--------------------+----------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -516,10 +517,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1291  ;
+; Total registers                              ; 1292  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1163  ;
+; Number of registers using Asynchronous Clear ; 1164  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1152  ;
 ; Number of registers using Preset             ; 0     ;
@@ -531,28 +532,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|reg:HIReg|DATA[25]                   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data1[12] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data0[1]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|reg:HIReg|DATA[29]                   ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data1[28] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data0[3]  ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux|Y[0]               ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[5]              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[0]             ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[10]            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux|Y[8]                ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[1]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[1]             ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[12]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux|Y[6]                ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|state                                            ;
 ; 8:1                ; 6 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard|OpSelect       ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 24 LEs               ; 120 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[26]             ;
-; 254:1              ; 7 bits    ; 1183 LEs      ; 70 LEs               ; 1113 LEs               ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[17]                ;
-; 253:1              ; 8 bits    ; 1344 LEs      ; 80 LEs               ; 1264 LEs               ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[8]                 ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 24 LEs               ; 120 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[15]             ;
+; 254:1              ; 7 bits    ; 1183 LEs      ; 70 LEs               ; 1113 LEs               ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[22]                ;
+; 253:1              ; 8 bits    ; 1344 LEs      ; 80 LEs               ; 1264 LEs               ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[12]                ;
 ; 255:1              ; 4 bits    ; 680 LEs       ; 44 LEs               ; 636 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[25]                ;
-; 254:1              ; 4 bits    ; 676 LEs       ; 40 LEs               ; 636 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[6]                 ;
+; 254:1              ; 4 bits    ; 676 LEs       ; 40 LEs               ; 636 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[4]                 ;
 ; 256:1              ; 2 bits    ; 340 LEs       ; 22 LEs               ; 318 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[29]                ;
 ; 255:1              ; 2 bits    ; 340 LEs       ; 22 LEs               ; 318 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[2]                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated ;
+; Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_flr3:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                              ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
@@ -633,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
-; INIT_FILE                          ; TestCase1.mif        ; Untyped                                                                  ;
+; INIT_FILE                          ; TestCase2.mif        ; Untyped                                                                  ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                           ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
@@ -646,7 +647,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                           ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                                                  ;
-; CBXI_PARAMETER                     ; altsyncram_elr3      ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_flr3      ; Untyped                                                                  ;
 +------------------------------------+----------------------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1071,27 +1072,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 1291                        ;
-;     CLR               ; 107                         ;
+; cycloneiii_ff         ; 1292                        ;
+;     CLR               ; 108                         ;
 ;     ENA               ; 96                          ;
 ;     ENA CLR           ; 1056                        ;
 ;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 2815                        ;
+; cycloneiii_lcell_comb ; 2832                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2524                        ;
+;     normal            ; 2541                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 68                          ;
-;         3 data inputs ; 273                         ;
-;         4 data inputs ; 2179                        ;
+;         2 data inputs ; 74                          ;
+;         3 data inputs ; 261                         ;
+;         4 data inputs ; 2202                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 8.28                        ;
+; Average LUT depth     ; 8.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1110,7 +1111,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 29 17:31:08 2018
+    Info: Processing started: Thu Nov 29 18:04:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1234,7 +1235,7 @@ Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|Memory:Me
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "TestCase1.mif"
+    Info (12134): Parameter "init_file" = "TestCase2.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -1264,9 +1265,9 @@ Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|Memory:Me
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_elr3.tdf
-    Info (12023): Found entity 1: altsyncram_elr3 File: C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_elr3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_elr3" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_flr3.tdf
+    Info (12023): Found entity 1: altsyncram_flr3 File: C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_flr3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_flr3" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_flr3:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "genmux" for hierarchy "ctrler:controller|datapath:dp|genmux:PCmux" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 131
 Info (12128): Elaborating entity "reg" for hierarchy "ctrler:controller|datapath:dp|reg:IR" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 138
 Info (12128): Elaborating entity "genmux" for hierarchy "ctrler:controller|datapath:dp|genmux:WRregMux" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 152
@@ -1377,16 +1378,16 @@ Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0] h
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4094 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4113 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 4001 logic cells
+    Info (21061): Implemented 4020 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Thu Nov 29 17:31:35 2018
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Thu Nov 29 18:05:08 2018
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:43
 
 

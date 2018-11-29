@@ -245,7 +245,7 @@ HIReg : reg
 			q=>HIout);
 				
 HILOmux : genmux4 generic map(WIDTH=> 32)
-			port map(A=>ALUout,
+			port map(A=>ALUreg,
 			B=>LOout,
 			C=>HIout,
 			D=>HIout,

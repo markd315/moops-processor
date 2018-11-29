@@ -24,7 +24,7 @@ COMPONENT datapath
             OutPort   : out  std_logic_vector(31 downto 0));
 END COMPONENT ;
 
-TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, branchComplete, jumpComplete);  -- Define the states
+TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, rWrite, branchComplete, jumpComplete);  -- Define the states
 	SIGNAL state : State_Type;    -- Create a signal that uses 
 signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : std_logic := '0';
 signal PCSource, ALUSrcB, ALUOp : std_logic_vector(1 downto 0) := "00";
@@ -100,10 +100,14 @@ case state is
 			state <= readComplete;
 		WHEN exec => 
 			state <= rComplete;
+		WHEN rComplete => 
+			state <= rWrite;
 		WHEN branchComplete => 
 			state <= readComplete;
 		WHEN jumpComplete => 
 			state <= readComplete;
+		WHEN rWrite => 
+			state <= iFetchRead;
 		WHEN readComplete => 
 			state <= iFetchRead;
 		WHEN others =>
@@ -127,8 +131,8 @@ ALUOp <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=rComplete) ELSE 
 PCSource <= "01" WHEN (state=branchComplete or state=iFetchInc) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
 PCWriteCond <= '1' WHEN (state=branchComplete) ELSE '0';
 RegDst <= '1' WHEN (state=rComplete) ELSE '0';
-RegWrite <= '1' WHEN (state=rComplete or state=readComplete) ELSE '0';
-MemToReg <= '0' WHEN (state=rComplete) ELSE '1';
+RegWrite <= '1' WHEN (state=readComplete or state=rWrite) ELSE '0';
+MemToReg <= '0' WHEN (state=rWrite) ELSE '1';
 InPort0_en <= en1;
 InPort1_en <= en2;
 InPort0_in <= inport1;
