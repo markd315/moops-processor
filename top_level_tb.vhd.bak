@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity top_level_tb is
+end top_level_tb;
+
+architecture TB of top_level_tb is
+
+  signal clk    : std_logic := '0';
+  signal addrin      : std_logic_vector(9 downto 0) := (others => '0');
+  signal output : std_logic_vector(31 downto 0);
+
+begin
+
+  UUT : entity work.top_level
+    port map (
+      clk    => clk,
+		addrin       => addrin,
+      output => output);
+
+  process
+  begin
+    -- test all input combinations
+	  for j in 0 to 1024 loop --read the first 1k words.
+			for l in 0 to 1 loop
+          clk <= std_logic(to_unsigned(l, 1)(0));
+			 addrin   <= std_logic_vector(to_unsigned(j, 10));
+          wait for 120 ns;
+        end loop;
+      end loop;
+
+    report "SIMULATION FINISHED!";
+    
+    wait;
+
+  end process;
+
+end TB;

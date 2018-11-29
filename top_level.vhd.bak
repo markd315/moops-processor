@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity top_level is
+  port (
+	 addrin : in std_logic_vector(9 downto 0);
+	 --start      : in  std_logic_vector(31 downto 0);
+	 clk      : in  std_logic;
+	 --resetn      : in  std_logic;
+    output  : out std_logic_vector(31 downto 0));
+end entity;
+
+
+architecture tl of top_level is
+
+COMPONENT Romulus IS PORT
+	(address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		rden		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT datapath is
+	port (
+	 input      : in  std_logic_vector(31 downto 0);
+	 clk      : in  std_logic;
+	 rst      : in  std_logic;
+    output  : out std_logic_vector(31 downto 0));
+END COMPONENT ;
+
+signal romout : std_logic_vector(31 downto 0);
+
+begin
+
+rommy : Romulus port map(addrin, clk, '1', romout);
+
+mine : datapath port map(romout, clk, '0', output);
+
+
+end tl;

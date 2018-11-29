@@ -1,0 +1,162 @@
+# reading C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project Project_ms
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 15:33:23 on Nov 09,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (7 downto -24).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_ns_tb/UUT File: C:/intelFPGA_lite/18.0/4712/Project_ms/alu_ns.vhd Line: 23
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:33:23 on Nov 09,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 15:33:37 on Nov 09,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (7 downto -24).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_ns_tb/UUT File: C:/intelFPGA_lite/18.0/4712/Project_ms/alu_ns.vhd Line: 23
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:33:38 on Nov 09,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 15:34:33 on Nov 09,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+# ** Warning: (vsim-8683) Uninitialized out port /alu_ns_tb/UUT/branch_taken has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint sim:/alu_ns_tb/UUT/*
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+run -all
+# ** Warning: Error                                    : overflow incorrect for 5*6
+#    Time: 360 ns  Iteration: 0  Instance: /alu_ns_tb
+# ** Warning: Error : sra= 2013265924
+#    Time: 840 ns  Iteration: 0  Instance: /alu_ns_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1200 ns  Iteration: 0  Instance: /alu_ns_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1200 ns  Iteration: 0  Instance: /alu_ns_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 1200 ns  Iteration: 0  Instance: /alu_ns_tb
+# ** Warning: Error : slt= 0
+#    Time: 1200 ns  Iteration: 0  Instance: /alu_ns_tb
+quit -sim
+# End time: 15:41:18 on Nov 09,2018, Elapsed time: 0:06:45
+# Errors: 2, Warnings: 7
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 15:42:11 on Nov 09,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+# ** Warning: (vsim-8683) Uninitialized out port /alu_ns_tb/UUT/branch_taken has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint sim:/alu_ns_tb/UUT/*
+run -all
+# ** Warning: Error                                    : overflow incorrect for -4*10
+#    Time: 360 ns  Iteration: 0  Instance: /alu_ns_tb
+quit -sim
+# End time: 16:01:18 on Nov 09,2018, Elapsed time: 0:19:07
+# Errors: 0, Warnings: 2
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 16:01:28 on Nov 09,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+# ** Warning: (vsim-8683) Uninitialized out port /alu_ns_tb/UUT/branch_taken has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint sim:/alu_ns_tb/UUT/*
+run -all
+quit -sim
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# End time: 15:18:53 on Nov 11,2018, Elapsed time: 47:17:25
+# Errors: 0, Warnings: 1
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.alu_ns_tb
+# vsim -gui work.alu_ns_tb 
+# Start time: 15:19:03 on Nov 11,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_ns_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_ns(logic)
+add wave -position insertpoint sim:/alu_ns_tb/UUT/*
+run -all
+quit -sim
+# End time: 18:58:35 on Nov 11,2018, Elapsed time: 3:39:32
+# Errors: 0, Warnings: 0
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of alu_ns_tb.vhd was successful with warnings.
+# Compile of alu_ns.vhd was successful.
+# 2 compiles, 0 failed with no errors.

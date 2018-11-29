@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity bus_latch is
+   port
+   (
+      rst, en : in std_logic;
+      
+      d : in std_logic_vector(31 downto 0);
+
+      q : out std_logic_vector(31 downto 0)
+   );
+end entity bus_latch;
+ 
+architecture flip of bus_latch is
+
+begin
+   process (en) is
+   begin
+      if (en = '1') then  
+         if (rst='1') then   
+            q <= (others => '0');
+         else
+				q <= d;
+         end if;
+      end if;
+   end process;
+end architecture flip;

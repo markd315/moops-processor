@@ -1,0 +1,106 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity alu_ns is
+generic (
+            WIDTH : positive := 16
+            );
+        port (
+            input1   : in  std_logic_vector(WIDTH-1 downto 0);
+            input2   : in  std_logic_vector(WIDTH-1 downto 0);
+            sel      : in  std_logic_vector(3 downto 0);
+            output   : out std_logic_vector(WIDTH-1 downto 0);
+            overflow : out std_logic
+            );
+
+
+end alu_ns;
+
+architecture logic of alu_ns is
+SIGNAL nullsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL notsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL norsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL orsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL xorsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL andsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL nandsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL sumsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL subsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL leftsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL rightsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL halfsig : STD_LOGIC_vector(WIDTH-1 downto 0) ;
+SIGNAL revsig : STD_LOGIC_vector(WIDTH -1 downto 0);
+SIGNAL multsig : STD_LOGIC_vector(WIDTH -1 downto 0);
+SIGNAL multresult : unsigned(WIDTH + WIDTH - 1 downto 0);
+SIGNAL div8sig : STD_LOGIC_vector(WIDTH -1 downto 0);
+SIGNAL sumresult : unsigned(WIDTH downto 0);
+SIGNAL add_overflow : STD_LOGIC;
+SIGNAL left_carry : STD_LOGIC;
+SIGNAL right_carry : STD_LOGIC;
+SIGNAL mult_carry : STD_LOGIC;
+	COMPONENT addergeneric
+		generic (
+            WIDTH : positive := 16
+            );
+		port(input1, input2 : in std_logic_vector(WIDTH-1 downto 0);
+			carry_in : in std_logic;
+			sum : out std_logic_vector(WIDTH-1 downto 0);
+			carry_out : out std_logic);
+	END COMPONENT ;
+begin  -- STR
+	notsig <= not(input1);
+	norsig <= not(input1 or input2);
+	xorsig <= input1 xor input2;
+	orsig <= input1 or input2;
+	andsig <= input1 and input2;
+	nandsig <= not(input1 and input2);
+	subsig <= std_logic_vector(unsigned(input1(WIDTH-1 downto 0)) - unsigned(input2(WIDTH-1 downto 0)));
+	left_carry <= input1(WIDTH-1);
+	right_carry <= input1(0);
+	leftsig <= std_logic_vector(SHIFT_LEFT(unsigned(input1(WIDTH-1 downto 0)), 1));
+	rightsig <= std_logic_vector(SHIFT_RIGHT(unsigned(input1(WIDTH-1 downto 0)), 1));
+	div8sig <= std_logic_vector(SHIFT_RIGHT(unsigned(input1(WIDTH-1 downto 0)), 3));
+	halfsig <= std_logic_vector(ROTATE_LEFT(unsigned(input1(WIDTH-1 downto 0)), WIDTH/2));
+	multresult <= unsigned(input1(WIDTH-1 downto 0)) * unsigned(input2(WIDTH-1 downto 0));
+	multsig <= std_logic_vector(multresult(WIDTH-1 downto 0));
+	sumresult <= unsigned('0' & input1(WIDTH-1 downto 0)) + unsigned('0' & input2(WIDTH-1 downto 0));
+	sumsig <= std_logic_vector(sumresult(WIDTH-1 downto 0));
+	add_overflow <= std_logic(sumresult(WIDTH));
+	process (input1)
+	begin
+		for i in 0 to WIDTH-1 loop
+		revsig(WIDTH -1 - i) <= input1(i);
+		nullsig(WIDTH -1 -i) <= '0';
+		end loop;
+	end process;
+	process(multresult)
+	begin
+		mult_carry <= '0';
+		for i in WIDTH-1 to WIDTH+WIDTH-1 loop
+			if(multresult(i) = '1') then
+				mult_carry <= '1';
+			end if;
+		end loop;
+	end process;
+	output <= notsig when sel(3 downto 0) = "0000" else 
+				norsig when sel(3 downto 0) = "0001" else 
+				xorsig when sel(3 downto 0) = "0010" else 
+				orsig when sel(3 downto 0) = "0011" else 
+				andsig when sel(3 downto 0) = "0100" else 
+				sumsig when sel(3 downto 0) = "0101" else 
+				subsig when sel(3 downto 0) = "0110" else 
+				multsig when sel(3 downto 0) = "0111" else 
+				leftsig when sel(3 downto 0) = "1010" else 
+				rightsig when sel(3 downto 0) = "1011" else 
+				revsig when sel(3 downto 0) = "1100" else 
+				halfsig when sel(3 downto 0) = "1101" else
+				nandsig when sel(3 downto 0) = "1110" else
+			   div8sig when sel(3 downto 0) = "1111" else	nullsig;
+				
+	overflow <= add_overflow when sel(3 downto 0) = "0101" else 
+				left_carry when sel(3 downto 0) = "1010" else 
+				right_carry when sel(3 downto 0) = "1011" else 
+				mult_carry when sel(3 downto 0) = "0111" else '0';
+
+end logic;
