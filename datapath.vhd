@@ -67,7 +67,8 @@ generic(
 end component;
 component ALUcontroller
 	port(ALUOp : in std_logic_vector(1 downto 0);
-		IR : in std_logic_vector(5 downto 0);
+		fn : in std_logic_vector(5 downto 0);
+		Opcode : in std_logic_vector(5 downto 0);
 		OpSelect : out std_logic_vector(5 downto 0);
 		ALU_LO_HI : out std_logic_vector(1 downto 0);
 		HI_en, LO_en : out std_logic);
@@ -212,7 +213,8 @@ ALU : alu_ns generic map(WIDTH=>32)
 				branch_taken=>branch_taken);
 				
 alucard : ALUcontroller	port map(ALUOp=> ALUOp,
-		IR=>IRout(5 downto 0),
+		fn=>IRout(5 downto 0),
+		Opcode=>IRout(31 downto 26),
 		OpSelect=>OpSelect,
 		ALU_LO_HI=>ALU_LO_HI,
 		HI_en=>HI_en, 

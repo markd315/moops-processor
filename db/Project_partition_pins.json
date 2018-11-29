@@ -140,7 +140,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "input[2]",
+					"name" : "input[0]",
 					"strict" : false
 				},
 				{
@@ -152,15 +152,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "input[1]",
-					"strict" : false
-				},
-				{
-					"name" : "input[0]",
+					"name" : "input[2]",
 					"strict" : false
 				},
 				{
 					"name" : "input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
 					"strict" : false
 				},
 				{
