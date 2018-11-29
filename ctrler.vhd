@@ -116,6 +116,8 @@ MemWrite <= '1' WHEN (state=memAccessW) ELSE '0';
 ALUSrcA <= '1' WHEN (state=memAddr or state=rComplete or state=branchComplete) ELSE '0';
 ALUSrcB <= "01" WHEN (state=iFetchRead) ELSE 
 				"00" WHEN state=branchComplete ELSE
+				"10" WHEN (state=rComplete and controllerIR(3)='1') ELSE --most Itypes
+				"10" WHEN (state=rComplete and controllerIR="010000") ELSE --bullshit stray subtract Itype
 				"10" WHEN (state=memAddr or state=iDecode) ELSE
 				"00";
 IorD <= '1' WHEN state=memAddr or state=iFetchInc ELSE '0';
