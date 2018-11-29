@@ -104,7 +104,7 @@ SIGNAL pcSourceOut, AregMemMuxIn, ALUout, MDRout, WRdata, HILOmuxOut, rd_data0, 
 SIGNAL WRreg : STD_LOGIC_vector(4 downto 0) := (others => '0');
 SIGNAL OpSelect : STD_LOGIC_vector(5 downto 0) := (others => '0');
 SIGNAL ALU_LO_HI : STD_LOGIC_vector(1 downto 0) := (others => '0');
-SIGNAL HI_en, LO_en, PC_en, branch_taken: STD_LOGIC := '0';
+SIGNAL HI_en, LO_en, PC_en, branch_taken, lo_wr, hi_wr: STD_LOGIC := '0';
 constant const4 : STD_LOGIC_vector(31 downto 0) := "00000000000000000000000000000100";
 
 begin  -- STR
@@ -226,17 +226,21 @@ ALUoutReg : reg
 			d=>ALUout,
 			rst=>rst,
 			q=>ALUreg);
+			
+lo_wr <= (LO_en and RegDst); --RegDst signifies rComplete state
+hi_wr <= (HI_en and RegDst);
+
 LOReg : reg
 			generic map(WIDTH=>32)
 			port map(clk=>clk,
 			d=>ALUout,
-			en=>lo_en,
+			en=>lo_wr,
 			q=>LOout);			
 HIReg : reg
 			generic map(WIDTH=>32)
 			port map(clk=>clk,
 			d=>result_hi,
-			en=>hi_en,
+			en=>hi_wr,
 			rst=>rst,
 			q=>HIout);
 				

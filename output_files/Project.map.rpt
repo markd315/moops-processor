@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project
-Thu Nov 29 17:13:04 2018
+Thu Nov 29 17:31:35 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -88,15 +88,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 29 17:13:04 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 29 17:31:35 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Project                                     ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,889                                       ;
-;     Total combinational functions  ; 2,831                                       ;
-;     Dedicated logic registers      ; 1,259                                       ;
-; Total registers                    ; 1259                                        ;
+; Total logic elements               ; 3,905                                       ;
+;     Total combinational functions  ; 2,815                                       ;
+;     Dedicated logic registers      ; 1,291                                       ;
+; Total registers                    ; 1291                                        ;
 ; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
@@ -254,20 +254,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,889     ;
+; Estimated Total logic elements              ; 3,905     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2831      ;
+; Total combinational functions               ; 2815      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2170      ;
-;     -- 3 input functions                    ; 556       ;
-;     -- <=2 input functions                  ; 105       ;
+;     -- 4 input functions                    ; 2179      ;
+;     -- 3 input functions                    ; 526       ;
+;     -- <=2 input functions                  ; 110       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2540      ;
+;     -- normal mode                          ; 2524      ;
 ;     -- arithmetic mode                      ; 291       ;
 ;                                             ;           ;
-; Total registers                             ; 1259      ;
-;     -- Dedicated logic registers            ; 1259      ;
+; Total registers                             ; 1291      ;
+;     -- Dedicated logic registers            ; 1291      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 45        ;
@@ -276,9 +276,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 16        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1291      ;
-; Total fan-out                               ; 16046     ;
-; Average fan-out                             ; 3.80      ;
+; Maximum fan-out                             ; 1323      ;
+; Total fan-out                               ; 16098     ;
+; Average fan-out                             ; 3.79      ;
 +---------------------------------------------+-----------+
 
 
@@ -287,32 +287,33 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name     ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                         ; 2831 (2)            ; 1259 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
-;    |ctrler:controller|                             ; 2829 (17)           ; 1259 (11)                 ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
-;       |datapath:dp|                                ; 2812 (4)            ; 1248 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
-;          |ALUcontroller:alucard|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
-;          |Memory:Memmy|                            ; 121 (71)            ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
+; |top_level                                         ; 2815 (2)            ; 1291 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
+;    |ctrler:controller|                             ; 2813 (16)           ; 1291 (11)                 ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
+;       |datapath:dp|                                ; 2797 (6)            ; 1280 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
+;          |ALUcontroller:alucard|                   ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
+;          |Memory:Memmy|                            ; 118 (68)            ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
 ;             |LARams:Rammy|                         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy                                                                ; LARams          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                   |altsyncram_elr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_elr3:auto_generated ; altsyncram_elr3 ; work         ;
 ;             |bus_latch:Inport0|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Inport1|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Outputport|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport                                                        ; bus_latch       ; work         ;
-;          |alu_ns:ALU|                              ; 1038 (867)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
+;          |alu_ns:ALU|                              ; 1023 (852)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
 ;             |lpm_mult:Mult0|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0                                                                ; lpm_mult        ; work         ;
 ;                |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                        ; mult_tns        ; work         ;
 ;             |lpm_mult:Mult1|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1                                                                ; lpm_mult        ; work         ;
 ;                |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1|mult_qgs:auto_generated                                        ; mult_qgs        ; work         ;
 ;          |bus_latch:PClatch|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|bus_latch:PClatch                                                                        ; bus_latch       ; work         ;
-;          |genmux4:PCsourceMux|                     ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
+;          |genmux4:PCsourceMux|                     ; 67 (67)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
 ;          |genmux4:input2mux|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
 ;          |genmux:PCmux|                            ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
-;          |genmux:WRdataMux|                        ; 64 (64)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux                                                                         ; genmux          ; work         ;
+;          |genmux:WRdataMux|                        ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux                                                                         ; genmux          ; work         ;
 ;          |genmux:WRregMux|                         ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRregMux                                                                          ; genmux          ; work         ;
 ;          |genmux:input1mux|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:input1mux                                                                         ; genmux          ; work         ;
 ;          |reg:ALUoutReg|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:ALUoutReg                                                                            ; reg             ; work         ;
 ;          |reg:HIReg|                               ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:HIReg                                                                                ; reg             ; work         ;
 ;          |reg:IR|                                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:IR                                                                                   ; reg             ; work         ;
+;          |reg:LOReg|                               ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:LOReg                                                                                ; reg             ; work         ;
 ;          |reg:MDR|                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:MDR                                                                                  ; reg             ; work         ;
 ;          |reg:registerA|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerA                                                                            ; reg             ; work         ;
 ;          |reg:registerB|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerB                                                                            ; reg             ; work         ;
@@ -469,46 +470,45 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                              ;
-+-------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                     ; Reason for Removal                          ;
-+-------------------------------------------------------------------+---------------------------------------------+
-; ctrler:controller|datapath:dp|reg:LOReg|DATA[0..31]               ; Stuck at GND due to stuck port clock_enable ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][31] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][30] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][29] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][28] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][27] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][26] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][25] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][24] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][23] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][22] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][21] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][20] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][19] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][18] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][17] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][16] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][15] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][14] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][13] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][12] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][11] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][10] ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][9]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][8]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][7]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][6]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][5]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][4]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][3]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][2]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][1]  ; Stuck at GND due to stuck port data_in      ;
-; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][0]  ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 64                            ;                                             ;
-+-------------------------------------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++-------------------------------------------------------------------+----------------------------------------+
+; Register name                                                     ; Reason for Removal                     ;
++-------------------------------------------------------------------+----------------------------------------+
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][31] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][30] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][29] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][28] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][27] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][26] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][25] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][24] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][23] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][22] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][21] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][20] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][19] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][18] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][17] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][16] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][15] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][14] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][13] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][12] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][11] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][10] ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][9]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][8]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][7]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][6]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][5]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][4]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][3]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][2]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][1]  ; Stuck at GND due to stuck port data_in ;
+; ctrler:controller|datapath:dp|registerfile:reggiefile|regs[0][0]  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32                            ;                                        ;
++-------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -516,12 +516,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1259  ;
+; Total registers                              ; 1291  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1163  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1120  ;
+; Number of registers using Clock Enable       ; 1152  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1071,27 +1071,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 1259                        ;
+; cycloneiii_ff         ; 1291                        ;
 ;     CLR               ; 107                         ;
-;     ENA               ; 64                          ;
+;     ENA               ; 96                          ;
 ;     ENA CLR           ; 1056                        ;
 ;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 2831                        ;
+; cycloneiii_lcell_comb ; 2815                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2540                        ;
+;     normal            ; 2524                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 63                          ;
-;         3 data inputs ; 303                         ;
-;         4 data inputs ; 2170                        ;
+;         2 data inputs ; 68                          ;
+;         3 data inputs ; 273                         ;
+;         4 data inputs ; 2179                        ;
 ; cycloneiii_mac_mult   ; 8                           ;
 ; cycloneiii_mac_out    ; 8                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 8.43                        ;
+; Average LUT depth     ; 8.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1110,7 +1110,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 29 17:12:37 2018
+    Info: Processing started: Thu Nov 29 17:31:08 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1377,16 +1377,16 @@ Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0] h
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4078 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4094 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 3985 logic cells
+    Info (21061): Implemented 4001 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 16 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Thu Nov 29 17:13:04 2018
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Thu Nov 29 17:31:35 2018
     Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Total CPU time (on all processors): 00:00:41
 
 

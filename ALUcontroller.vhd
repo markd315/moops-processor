@@ -41,6 +41,7 @@ begin
 		
 		if(fn = "011000" or fn="011001") then --0x18/0x19 are multiply
 			HI_en <= '1';
+			LO_en <= '1';
 		end if;
 		
 		if(fn = "010000")  then --0x10/0x12 
