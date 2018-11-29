@@ -7,24 +7,24 @@ entity registerfile is
         clk : in std_logic;
         rst : in std_logic;
 		  
-        rd_addr0 : in std_logic_vector(4 downto 0):= "00000"; --read reg 1
-        rd_addr1 : in std_logic_vector(4 downto 0):= "00000"; --read reg 2
+        rd_addr0 : in std_logic_vector(4 downto 0); --read reg 1
+        rd_addr1 : in std_logic_vector(4 downto 0); --read reg 2
 		  
-        wr_addr : in std_logic_vector(4 downto 0) := (others => '0'); --write register
-        wr_en : in std_logic := '0';
-        wr_data : in std_logic_vector(31 downto 0) := (others => '0'); --write data
+        wr_addr : in std_logic_vector(4 downto 0); --write register
+        wr_en : in std_logic;
+        wr_data : in std_logic_vector(31 downto 0); --write data
 		  
-        rd_data0 : out std_logic_vector(31 downto 0) := (others => '0'); --read data 1
-        rd_data1 : out std_logic_vector(31 downto 0) := (others => '0'); --read data 2
+        rd_data0 : out std_logic_vector(31 downto 0); --read data 1
+        rd_data1 : out std_logic_vector(31 downto 0); --read data 2
 		  --JAL
-		  PC_4 : in std_logic_vector(31 downto 0) := (others => '0');
-		  JumpAndLink : in std_logic := '0'
+		  PC_4 : in std_logic_vector(31 downto 0);
+		  JumpAndLink : in std_logic
         );
 end registerfile;
 
 architecture sync_read of registerfile is
     type reg_array is array(0 to 31) of std_logic_vector(31 downto 0);
-    signal regs : reg_array := ((others=> (others=>'0')));
+    signal regs : reg_array;
     
 begin
     process (clk, rst) is

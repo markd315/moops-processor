@@ -5,7 +5,7 @@ entity bus_latch is
    port
    (
 		en : in std_logic := '0';
-      d : in std_logic_vector(31 downto 0);
+      d : in std_logic_vector(31 downto 0) := (others => '0');
       q : out std_logic_vector(31 downto 0) := (others => '0')
    );
 end entity bus_latch;

@@ -11,23 +11,22 @@ entity reg is
 		
 		en : in std_logic := '1';
       
-      d : in std_logic_vector(WIDTH-1 downto 0);
+      d : in std_logic_vector(WIDTH-1 downto 0) := (others => '0');
 
       q : out std_logic_vector(WIDTH-1 downto 0) := (others => '0')
    );
 end entity reg;
  
 architecture flip of reg is
-
+signal DATA: std_logic_vector(WIDTH-1 downto 0);
 begin
    process (clk, en, rst) is
    begin
-      if (clk'event and clk = '1' and en = '1') then  
-         if (rst='1') then   
-            q <= (others => '0');
-         else
-				q <= d;
-         end if;
+		if(rst = '1') then
+			DATA <= (others => '0');
+		elsif (clk'event and clk = '1' and en = '1') then  
+			DATA <= d;
       end if;
    end process;
+	q<= DATA;
 end architecture flip;

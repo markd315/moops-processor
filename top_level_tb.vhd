@@ -26,9 +26,11 @@ begin
 
   process
   begin
-  
   reset <= '1';
-  wait for 120 ns;
+  for l in 0 to 10 loop --cycle a few times to wipe the data lines
+    clk <= std_logic(to_unsigned(l, 1)(0));
+    wait for 120 ns;
+  end loop;
   reset <= '0';
   
     -- test all input combinations

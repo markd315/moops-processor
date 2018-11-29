@@ -5,20 +5,20 @@ use ieee.std_logic_arith.all;
 
 entity datapath is
         port (
-				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : in  std_logic;
-				PCSource, ALUSrcB, ALUOp : in std_logic_vector(1 downto 0);
+				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : in  std_logic := '0';
+				PCSource, ALUSrcB, ALUOp : in std_logic_vector(1 downto 0):= (others => '0');
 				InPort0_en, InPort1_en   : in  std_logic;
-            InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0);
+            InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0):= (others => '0');
 				clk, rst   : in  std_logic;
-				controllerIR   : out  std_logic_vector(5 downto 0);
+				controllerIR   : out  std_logic_vector(5 downto 0):= (others => '0');
             OutPort   : out  std_logic_vector(31 downto 0) := (others => '0'));
 end datapath;
 
 architecture logic of datapath is
 component registerfile port(clk : in std_logic;
         rst : in std_logic;
-        rd_addr0 : in std_logic_vector(4 downto 0); --read reg 1
-        rd_addr1 : in std_logic_vector(4 downto 0); --read reg 2
+        rd_addr0 : in std_logic_vector(4 downto 0) := "00000"; --read reg 1
+        rd_addr1 : in std_logic_vector(4 downto 0) := "00000"; --read reg 2
         wr_addr : in std_logic_vector(4 downto 0); --write register
         wr_en : in std_logic;
         wr_data : in std_logic_vector(31 downto 0); --write data
@@ -75,8 +75,8 @@ end component;
 
 component alu_ns generic (WIDTH : positive := 32);
         port (
-            input1   : in  std_logic_vector(WIDTH-1 downto 0);
-            input2   : in  std_logic_vector(WIDTH-1 downto 0);
+            input1   : in  std_logic_vector(WIDTH-1 downto 0) := (others => '0');
+            input2   : in  std_logic_vector(WIDTH-1 downto 0) := (others => '0');
             sel      : in  std_logic_vector(5 downto 0);
 				shift_amt: in  std_logic_vector(4 downto 0);
             output, output_hi   : out std_logic_vector(WIDTH-1 downto 0);
@@ -98,12 +98,12 @@ component Memory port (baddr   : in  std_logic_vector(31 downto 0);
             dataOut   : out std_logic_vector(31 downto 0));
 end component;
 
-SIGNAL regA, regB, PCmuxout, IRandMDRin, IRout, input1, input2, signextended, shiftedleft, IRconcatenated : STD_LOGIC_vector(31 downto 0) := "00000000000000000000000000000000";
-SIGNAL pcSourceOut, AregMemMuxIn, ALUout, MDRout, WRdata, HILOmuxOut, rd_data0, rd_data1, ALUreg, LOout, HIout, result_hi : STD_LOGIC_vector(31 downto 0) := "00000000000000000000000000000000";
-SIGNAL WRreg : STD_LOGIC_vector(4 downto 0);
-SIGNAL OpSelect : STD_LOGIC_vector(5 downto 0);
-SIGNAL ALU_LO_HI : STD_LOGIC_vector(1 downto 0);
-SIGNAL HI_en, LO_en, PC_en, branch_taken: STD_LOGIC;
+SIGNAL regA, regB, PCmuxout, IRandMDRin, IRout, input1, input2, signextended, shiftedleft, IRconcatenated : STD_LOGIC_vector(31 downto 0) := (others => '0');
+SIGNAL pcSourceOut, AregMemMuxIn, ALUout, MDRout, WRdata, HILOmuxOut, rd_data0, rd_data1, ALUreg, LOout, HIout, result_hi : STD_LOGIC_vector(31 downto 0) := (others => '0');
+SIGNAL WRreg : STD_LOGIC_vector(4 downto 0) := (others => '0');
+SIGNAL OpSelect : STD_LOGIC_vector(5 downto 0) := (others => '0');
+SIGNAL ALU_LO_HI : STD_LOGIC_vector(1 downto 0) := (others => '0');
+SIGNAL HI_en, LO_en, PC_en, branch_taken: STD_LOGIC := '0';
 constant const4 : STD_LOGIC_vector(31 downto 0) := "00000000000000000000000000000100";
 
 begin  -- STR
@@ -129,7 +129,7 @@ PClatch : bus_latch
 			
 PCmux : genmux generic map(WIDTH=> 32)
 			port map(A=>AregMemMuxIn,
-			B=>ALUreg,
+			B=>ALUout,
 			S=>IorD,
 			Y=>PCmuxout);
 			

@@ -5,11 +5,11 @@ use ieee.std_logic_arith.all;
 
 entity Memory is
         port (
-            baddr   : in  std_logic_vector(31 downto 0);
-            dataIn   : in  std_logic_vector(31 downto 0);
+            baddr   : in  std_logic_vector(31 downto 0) := (others => '0');
+            dataIn   : in  std_logic_vector(31 downto 0) := (others => '0');
 				memRead, memWrite, clk, rst : in  std_logic;
-				InPort0_en, InPort1_en   : in  std_logic;
-            InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0);
+				InPort0_en, InPort1_en   : in  std_logic := '0';
+            InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0) := (others => '0');
             OutPort   : out  std_logic_vector(31 downto 0) := (others => '0');
             dataOut   : out std_logic_vector(31 downto 0) := (others => '0')
             );
