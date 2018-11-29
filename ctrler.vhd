@@ -15,7 +15,7 @@ architecture FSM of ctrler is
 
 COMPONENT datapath
 		port (
-				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : in  std_logic;
+				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : in  std_logic;
 				PCSource, ALUSrcB : in std_logic_vector(1 downto 0);
 				InPort0_en, InPort1_en   : in  std_logic;
             InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0);
@@ -26,9 +26,9 @@ END COMPONENT ;
 
 TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, rWrite, branchComplete, jumpComplete);  -- Define the states
 	SIGNAL state : State_Type;    -- Create a signal that uses 
-signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : std_logic := '0';
+signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : std_logic := '0';
 signal PCSource, ALUSrcB, ALUOp : std_logic_vector(1 downto 0) := "00";
-signal InPort0_en, InPort1_en :  std_logic := '0';
+signal InPort0_en, InPort1_en, iSub, isIType :  std_logic := '0';
 signal InPort0_in, InPort1_in :  std_logic_vector(31 downto 0);
 signal controllerIR : std_logic_vector(5 downto 0);
 
@@ -48,6 +48,7 @@ dp : entity work.datapath(logic)
 				ALUSrcA => ALUSrcA,
 				RegWrite => RegWrite,
 				RegDst => RegDst,
+				HILO_clk => HILO_clk,
 				PCSource => PCSource,
 				ALUSrcB => ALUSrcB,
 				InPort0_en => InPort0_en,
@@ -59,6 +60,9 @@ dp : entity work.datapath(logic)
 				ALUOp => ALUOp,
 				controllerIR => controllerIR,
 				OutPort => OutPort);
+				
+iSub <= '1' WHEN controllerIR="010000" ELSE '0';--bullshit stray subtract Itype
+isIType <= (controllerIR(3) or iSub); --most Itypes
 				
 process(clk, rst)
 begin
@@ -120,8 +124,7 @@ MemWrite <= '1' WHEN (state=memAccessW) ELSE '0';
 ALUSrcA <= '1' WHEN (state=memAddr or state=rComplete or state=branchComplete) ELSE '0';
 ALUSrcB <= "01" WHEN (state=iFetchRead) ELSE 
 				"00" WHEN state=branchComplete ELSE
-				"10" WHEN (state=rComplete and controllerIR(3)='1') ELSE --most Itypes
-				"10" WHEN (state=rComplete and controllerIR="010000") ELSE --bullshit stray subtract Itype
+				"10" WHEN (state=rComplete and isIType='1') ELSE 
 				"10" WHEN (state=memAddr or state=iDecode) ELSE
 				"00";
 IorD <= '1' WHEN state=memAddr or state=iFetchInc ELSE '0';
@@ -130,9 +133,10 @@ PCWrite <= '1' WHEN (state=iFetchInc or state=jumpComplete) ELSE '0';
 ALUOp <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=rComplete) ELSE "00";
 PCSource <= "01" WHEN (state=branchComplete or state=iFetchInc) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
 PCWriteCond <= '1' WHEN (state=branchComplete) ELSE '0';
-RegDst <= '1' WHEN (state=rComplete) ELSE '0';
+RegDst <= '1' WHEN (state=rComplete or (state=rWrite and isIType='0')) ELSE '0';
 RegWrite <= '1' WHEN (state=readComplete or state=rWrite) ELSE '0';
 MemToReg <= '0' WHEN (state=rWrite) ELSE '1';
+HILO_clk <= '1' WHEN (state=rComplete) ELSE '0';
 InPort0_en <= en1;
 InPort1_en <= en2;
 InPort0_in <= inport1;

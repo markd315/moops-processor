@@ -1,5 +1,5 @@
 Flow report for Project
-Thu Nov 29 18:05:08 2018
+Thu Nov 29 18:35:29 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 29 18:05:08 2018       ;
+; Flow Status                        ; Successful - Thu Nov 29 18:35:29 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Project                                     ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,923                                       ;
-;     Total combinational functions  ; 2,832                                       ;
+; Total logic elements               ; 3,916                                       ;
+;     Total combinational functions  ; 2,825                                       ;
 ;     Dedicated logic registers      ; 1,292                                       ;
 ; Total registers                    ; 1292                                        ;
 ; Total pins                         ; 45                                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2018 18:04:41 ;
+; Start date & time ; 11/29/2018 18:35:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project             ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589205.154353268122340         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589205.154353450210768         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; LARams.cmp                             ; --            ; --          ; --         ;
@@ -101,8 +101,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4847 MB             ; 00:00:42                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4845 MB             ; 00:00:41                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

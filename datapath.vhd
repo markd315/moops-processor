@@ -5,7 +5,7 @@ use ieee.std_logic_arith.all;
 
 entity datapath is
         port (
-				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst : in  std_logic := '0';
+				PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : in  std_logic := '0';
 				PCSource, ALUSrcB, ALUOp : in std_logic_vector(1 downto 0):= (others => '0');
 				InPort0_en, InPort1_en   : in  std_logic;
             InPort0_in, InPort1_in   : in  std_logic_vector(31 downto 0):= (others => '0');
@@ -104,7 +104,7 @@ SIGNAL pcSourceOut, AregMemMuxIn, ALUout, MDRout, WRdata, HILOmuxOut, rd_data0, 
 SIGNAL WRreg : STD_LOGIC_vector(4 downto 0) := (others => '0');
 SIGNAL OpSelect : STD_LOGIC_vector(5 downto 0) := (others => '0');
 SIGNAL ALU_LO_HI : STD_LOGIC_vector(1 downto 0) := (others => '0');
-SIGNAL HI_en, LO_en, PC_en, branch_taken, lo_wr, hi_wr: STD_LOGIC := '0';
+SIGNAL HI_en, LO_en, PC_en, branch_taken, lo_wr, hi_wr, iSub, isIType: STD_LOGIC := '0';
 constant const4 : STD_LOGIC_vector(31 downto 0) := "00000000000000000000000000000100";
 
 begin  -- STR
@@ -227,8 +227,8 @@ ALUoutReg : reg
 			rst=>rst,
 			q=>ALUreg);
 			
-lo_wr <= (LO_en and RegDst); --RegDst signifies rComplete state
-hi_wr <= (HI_en and RegDst);
+lo_wr <= (LO_en and HILO_clk); --Only update these during a multiply in rComplete state
+hi_wr <= (HI_en and HILO_clk);
 
 LOReg : reg
 			generic map(WIDTH=>32)
@@ -263,5 +263,7 @@ PCsourceMux : genmux4 generic map(WIDTH=> 32)
 IRconcatenated <= AregMemMuxIn(31 downto 28) & AregMemMuxIn(25 downto 0) & "00";
 shiftedleft <= signextended(29 downto 0) & "00";
 controllerIR <= IRout(31 downto 26);
+iSub <= '1' WHEN IRout(31 downto 26)="010000" ELSE '0';--bullshit stray subtract Itype
+isIType <= (IRout(29) or iSub); --most Itypes
 PC_en <= (branch_taken and PCWriteCond) or PCWrite;
 end logic;
