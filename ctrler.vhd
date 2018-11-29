@@ -113,7 +113,7 @@ end if;
 end process;
 MemRead <= '1' WHEN (state=iFetchRead or state=memAddr) ELSE '0';
 MemWrite <= '1' WHEN (state=memAccessW) ELSE '0';
-ALUSrcA <= '1' WHEN (state=memAddr or state=exec or state=branchComplete) ELSE '0';
+ALUSrcA <= '1' WHEN (state=memAddr or state=rComplete or state=branchComplete) ELSE '0';
 ALUSrcB <= "01" WHEN (state=iFetchRead) ELSE 
 				"00" WHEN state=branchComplete ELSE
 				"10" WHEN (state=memAddr or state=iDecode) ELSE
@@ -121,7 +121,7 @@ ALUSrcB <= "01" WHEN (state=iFetchRead) ELSE
 IorD <= '1' WHEN state=memAddr or state=iFetchInc ELSE '0';
 IRWrite <= '1' WHEN (state=iFetchInc) ELSE '0';
 PCWrite <= '1' WHEN (state=iFetchInc or state=jumpComplete) ELSE '0';
-ALUOp <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=exec) ELSE "00";
+ALUOp <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=rComplete) ELSE "00";
 PCSource <= "01" WHEN (state=branchComplete or state=iFetchInc) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
 PCWriteCond <= '1' WHEN (state=branchComplete) ELSE '0';
 RegDst <= '1' WHEN (state=rComplete) ELSE '0';
