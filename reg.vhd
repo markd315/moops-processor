@@ -18,7 +18,7 @@ entity reg is
 end entity reg;
  
 architecture flip of reg is
-signal DATA: std_logic_vector(WIDTH-1 downto 0);
+signal DATA: std_logic_vector(WIDTH-1 downto 0) := (others => '0');
 begin
    process (clk, en, rst) is
    begin

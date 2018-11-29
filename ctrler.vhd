@@ -122,7 +122,7 @@ IorD <= '1' WHEN state=memAccessR or state=memAccessW or state=iFetchInc ELSE '0
 IRWrite <= '1' WHEN (state=iFetchInc) ELSE '0';
 PCWrite <= '1' WHEN (state=iFetchInc or state=jumpComplete) ELSE '0';
 ALUOp <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=exec) ELSE "00";
-PCSource <= "01" WHEN (state=branchComplete) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
+PCSource <= "01" WHEN (state=branchComplete or state=iFetchInc) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
 PCWriteCond <= '1' WHEN (state=branchComplete) ELSE '0';
 RegDst <= '1' WHEN (state=rComplete) ELSE '0';
 RegWrite <= '1' WHEN (state=rComplete or state=readComplete) ELSE '0';
