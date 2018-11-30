@@ -24,7 +24,7 @@ COMPONENT datapath
             OutPort   : out  std_logic_vector(31 downto 0));
 END COMPONENT ;
 
-TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, rWrite, branchComplete, jumpComplete);  -- Define the states
+TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, rWrite, branchReg, branchComplete, jumpComplete);  -- Define the states
 	SIGNAL state : State_Type;    -- Create a signal that uses 
 signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : std_logic := '0';
 signal PCSource, ALUSrcB, ALUOp : std_logic_vector(1 downto 0) := "00";
@@ -89,7 +89,7 @@ case state is
 			ELSIF controllerIR(5 downto 0)="000000" THEN
 				state <= exec; --for non-immediate rTypes
 			ELSE
-				state <= branchComplete; --0x00 to 0x07 not covered yet
+				state <= branchReg; --0x00 to 0x07 not covered yet
 			END IF; 
 			
 		WHEN memAddr => --0x2? is implied already
@@ -107,8 +107,10 @@ case state is
 			state <= rComplete;
 		WHEN rComplete => 
 			state <= rWrite;
+		WHEN branchReg =>
+			state <= branchComplete;
 		WHEN branchComplete => 
-			state <= readComplete;
+			state <= iFetchRead;
 		WHEN jumpComplete => 
 			state <= readComplete;
 		WHEN rWrite => 
