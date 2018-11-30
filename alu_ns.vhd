@@ -66,11 +66,11 @@ begin  -- STR
 	andsig <= input1 and input2;
 	nandsig <= not(input1 and input2);
 	subsig <= std_logic_vector(usinput1 - usinput2);
-	left_carry <= input1(WIDTH-1);
-	right_carry <= input1(0);
-	leftsig <= std_logic_vector(SHIFT_LEFT(usinput1, shiftamt));
-	rightsig <= std_logic_vector(SHIFT_RIGHT(usinput1, shiftamt));
-	srasig <= std_logic_vector(SHIFT_RIGHT(sinput1, shiftamt));
+	left_carry <= input2(WIDTH-1);
+	right_carry <= input2(0);
+	leftsig <= std_logic_vector(SHIFT_LEFT(usinput2, shiftamt));
+	rightsig <= std_logic_vector(SHIFT_RIGHT(usinput2, shiftamt));
+	srasig <= std_logic_vector(SHIFT_RIGHT(sinput2, shiftamt));
 	umultresult <= usinput1 * usinput2;
 	umultsig <= std_logic_vector(umultresult(WIDTH-1 downto 0));
 	smultresult <= signed(input1) * signed(input2);
