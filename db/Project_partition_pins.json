@@ -160,15 +160,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "input[5]",
+					"strict" : false
+				},
+				{
 					"name" : "input[3]",
 					"strict" : false
 				},
 				{
 					"name" : "input[4]",
-					"strict" : false
-				},
-				{
-					"name" : "input[5]",
 					"strict" : false
 				},
 				{

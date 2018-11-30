@@ -170,7 +170,7 @@ reggiefile : registerfile port map(clk=>clk,
         wr_data=>WRdata,
         rd_data0=>rd_data0,
         rd_data1=>rd_data1,
-		  PC_4 => PCmuxout,--?
+		  PC_4 => ALUreg,
 		  JumpAndLink=>JumpAndLink);
 			
 signextender : signextend port map(d=>IRout(15 downto 0),
@@ -260,7 +260,7 @@ PCsourceMux : genmux4 generic map(WIDTH=> 32)
 			S=>PCSource,
 			Y=>pcSourceOut);
 			
-IRconcatenated <= AregMemMuxIn(31 downto 28) & AregMemMuxIn(25 downto 0) & "00";
+IRconcatenated <= AregMemMuxIn(31 downto 28) & IRout(25 downto 0) & "00";
 shiftedleft <= signextended(29 downto 0) & "00";
 controllerIR <= IRout(31 downto 26);
 iSub <= '1' WHEN IRout(31 downto 26)="010000" ELSE '0';--bullshit stray subtract Itype

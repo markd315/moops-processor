@@ -28,7 +28,7 @@ TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAcce
 	SIGNAL state : State_Type;    -- Create a signal that uses 
 signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : std_logic := '0';
 signal PCSource, ALUSrcB, ALUOp : std_logic_vector(1 downto 0) := "00";
-signal InPort0_en, InPort1_en, iSub, isIType :  std_logic := '0';
+signal InPort0_en, InPort1_en, iSub, isIType, jalInstr :  std_logic := '0';
 signal InPort0_in, InPort1_in :  std_logic_vector(31 downto 0);
 signal controllerIR : std_logic_vector(5 downto 0);
 
@@ -63,7 +63,8 @@ dp : entity work.datapath(logic)
 				
 iSub <= '1' WHEN controllerIR="010000" ELSE '0';--bullshit stray subtract Itype
 isIType <= (controllerIR(3) or iSub); --most Itypes
-				
+jalInstr <= '1' WHEN controllerIR="000011" ELSE '0';
+		
 process(clk, rst)
 begin
 if (rst = '1') then            -- Upon reset
@@ -137,6 +138,7 @@ RegDst <= '1' WHEN (state=rComplete or (state=rWrite and isIType='0')) ELSE '0';
 RegWrite <= '1' WHEN (state=readComplete or state=rWrite) ELSE '0';
 MemToReg <= '0' WHEN (state=rWrite) ELSE '1';
 HILO_clk <= '1' WHEN (state=rComplete) ELSE '0';
+JumpAndLink <= '1' WHEN (state=iDecode and jalInstr='1') ELSE '0';
 InPort0_en <= en1;
 InPort1_en <= en2;
 InPort0_in <= inport1;
