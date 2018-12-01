@@ -96,7 +96,7 @@ case state is
 			IF controllerIR(3 downto 0)="0011" THEN --load 0011
 				state <= memAccessR;
 			ELSE
-				state <= memAccessW; --"1011"
+				state <= readComplete; --"1011"
 			END IF; 
  
 		WHEN memAccessR => 
@@ -138,7 +138,7 @@ ALUOp <= "01" WHEN (state=branchComplete or state=branchAddr) ELSE "10" WHEN (st
 PCSource <= "01" WHEN (state=branchComplete or state=iFetchInc) ELSE "10" WHEN (state=jumpComplete) ELSE "00";
 PCWriteCond <= '1' WHEN (state=branchComplete) ELSE '0';
 RegDst <= '1' WHEN (state=rComplete or (state=rWrite and isIType='0')) ELSE '0';
-RegWrite <= '1' WHEN (state=readComplete or state=rWrite) ELSE '0';
+RegWrite <= '1' WHEN (state=memAccessR or state=rWrite) ELSE '0';
 MemToReg <= '0' WHEN (state=rWrite) ELSE '1';
 HILO_clk <= '1' WHEN (state=rComplete) ELSE '0';
 JumpAndLink <= '1' WHEN (state=iDecode and jalInstr='1') ELSE '0';
