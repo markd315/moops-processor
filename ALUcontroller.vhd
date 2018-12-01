@@ -34,6 +34,8 @@ begin
 			OpSelect<= "100110";
 		elsif(Opcode = "001101") then --for immediate or
 			OpSelect<= "100101";
+		elsif(Opcode(5 downto 2) = "0001") then --for branches
+			OpSelect<= Opcode;
 		else
 			OpSelect<=fn;
 		end if;
@@ -53,7 +55,7 @@ begin
 		end if;
 		
 		--If ALUOp is 00, do addition for memaddr calculation or PC+4 (add immediate) 0x21
-		--If ALUOp is 01, this is a branch instruction (ignore)
+		--If ALUOp is 01, this is a branch instruction (ignore, ALU should handle it already)
 		
    end process;
 end architecture flip;

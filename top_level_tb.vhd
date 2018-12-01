@@ -27,19 +27,28 @@ begin
   process
   begin
   reset <= '1';
+  reset <= '0';
+  inen <= '1';
+  input  <= "000000100"; --input1 = 4
+  clk <= '0';
+  wait for 120 ns;
+  clk <= '1';
+  wait for 120 ns;
   for l in 0 to 10 loop --cycle a few times to wipe the data lines
     clk <= std_logic(to_unsigned(l, 1)(0));
+	 portSpec <= '1';
+	 input  <= "000000010"; --input2 = 2
     wait for 120 ns;
   end loop;
-  reset <= '0';
-  
+ 
     -- test all input combinations
 	 for k in 0 to 1 loop
 	  for j in 0 to 127 loop --try the first few input combos
 			for l in 0 to 1023 loop --cycle 1024 times for each input to make it through some opcodes
           clk <= std_logic(to_unsigned(l, 1)(0));
-			 portSpec <= std_logic(to_unsigned(k, 1)(0));
-			 input  <= std_logic_vector(to_unsigned(j, 9));
+			 inen<= '0';
+			 --portSpec <= std_logic(to_unsigned(k, 1)(0));
+			 --input  <= std_logic_vector(to_unsigned(j, 9));
           wait for 120 ns;
         end loop;
       end loop;

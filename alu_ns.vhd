@@ -108,12 +108,13 @@ begin  -- STR
 				smultsig when sel(5 downto 0) = "011000" else 
 				umultsig when sel(5 downto 0) = "011001" else 
 				leftsig when sel(5 downto 0) = "000000" else 
-				rightsig when sel(5 downto 0) = "000010" else 
+				rightsig when sel(5 downto 0) = "000010" else
 				--those are logical shifts
 				srasig when sel(5 downto 0) = "000011" else
 				--that's an arithmetic
-				onesig when ((sinput1 < sinput2) and sel = "101010") --slt signed
-						or ((usinput1 < usinput2) and sel = "101011") --slt unsigned
+				onesig when (((sinput1 < sinput2) and sel = "101010") --slt signed
+						or ((usinput1 < usinput2) and sel = "101011")) else --slt unsigned
+				input2 when sel(5 downto 2) = "0001" --conditional branches
 				else nullsig;
 	output_hi<=std_logic_vector(smultresult(WIDTH+WIDTH - 1 downto WIDTH)) when sel(5 downto 0) = "011000" else 
 				std_logic_vector(umultresult(WIDTH+WIDTH - 1 downto WIDTH)) when sel(5 downto 0) = "011001"
@@ -126,5 +127,7 @@ begin  -- STR
 				'0';
 	branch_taken <= '1' when sel(5 downto 0) = "000110" and (sinput1 <= 0) else --blez
 				'1' when sel(5 downto 0) = "000111" and (sinput1 > 0) else --bgtz
+				'1' when sel(5 downto 0) = "000101" and (not(sinput1 = sinput2)) else --bne
+				'1' when sel(5 downto 0) = "000100" and (sinput1 = sinput2) else --beq
 				'0';
 end logic;
