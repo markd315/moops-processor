@@ -3,87 +3,87 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -28.298
-TNS   : -16343.773
+Slack : -25.649
+TNS   : -13935.557
 
 Type  : Slow 1200mV 85C Model Setup 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -19.907
-TNS   : -660.631
+Slack : -17.314
+TNS   : -480.793
 
 Type  : Slow 1200mV 85C Model Hold 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -16.879
-TNS   : -433.210
+Slack : -3.268
+TNS   : -37.740
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.079
-TNS   : -0.079
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -12.965
-TNS   : -7108.462
+Slack : 0.157
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1831.611
+TNS   : -1876.507
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inen'
 Slack : -3.000
 TNS   : -3.000
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
+Slack : -0.505
+TNS   : -48.008
+
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -25.737
-TNS   : -15091.452
+Slack : -23.351
+TNS   : -12853.881
 
 Type  : Slow 1200mV 0C Model Setup 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -18.444
-TNS   : -613.320
+Slack : -15.856
+TNS   : -441.480
 
 Type  : Slow 1200mV 0C Model Hold 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -15.354
-TNS   : -392.707
+Slack : -2.755
+TNS   : -31.397
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.148
-TNS   : -0.148
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -11.834
-TNS   : -6427.110
+Slack : -0.011
+TNS   : -0.011
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1831.077
+TNS   : -1875.973
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inen'
 Slack : -3.000
 TNS   : -3.000
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
+Slack : -0.478
+TNS   : -38.975
+
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -12.598
-TNS   : -6636.409
+Slack : -11.029
+TNS   : -5392.202
 
 Type  : Fast 1200mV 0C Model Setup 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -8.640
-TNS   : -284.929
+Slack : -7.176
+TNS   : -200.170
 
 Type  : Fast 1200mV 0C Model Hold 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -7.547
-TNS   : -197.867
+Slack : -1.647
+TNS   : -23.248
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.219
-TNS   : -0.707
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
-Slack : -5.332
-TNS   : -2629.011
+Slack : 0.176
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1344.638
+TNS   : -1379.278
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inen'
 Slack : -3.000
 TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]'
+Slack : -0.302
+TNS   : -18.174
 
 ------------------------------------------------------------

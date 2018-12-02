@@ -17,7 +17,7 @@ end Memory;
 
 architecture logic of Memory is
 SIGNAL InPort0_out, InPort1_out, q : STD_LOGIC_vector(31 downto 0) := (others => '0');
-SIGNAL Outport_addr_true, legal_write : std_logic := '0';
+SIGNAL Outport_addr_true, legal_write, latch_outport : std_logic := '0';
 
 
 component LARams
@@ -29,6 +29,13 @@ component LARams
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
+end component;
+component reg generic(WIDTH : natural := 32);
+			port(clk : in std_logic;
+				en : in std_logic := '1';
+				rst : in std_logic := '0';
+				d : in std_logic_vector(31 downto 0);
+				q : out std_logic_vector(31 downto 0));
 end component;
 component bus_latch
    port
@@ -55,12 +62,14 @@ Inport1 : bus_latch
 				d => InPort1_in,
             q => InPort1_out);
 
-Outputport : bus_latch
+Outputport : reg
         port map (
-            en => Outport_addr_true,
+				clk => clk,
+            en => latch_outport,
 				d => dataIn,
             q => OutPort);
 				
+latch_outport <= Outport_addr_true and memWrite; 				
 				
 legal_write <= '0' when baddr = conv_std_logic_vector(16#0000FFF8#, baddr'length) else --prevent writing to inport with the matching address
 					'0' when baddr = conv_std_logic_vector(16#0000FFF9#, baddr'length) else

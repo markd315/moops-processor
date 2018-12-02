@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project
-Sat Dec 01 17:12:26 2018
+Sat Dec 01 19:05:36 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -21,10 +21,10 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  13. Registers Removed During Synthesis
  14. General Register Statistics
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_klr3:auto_generated
+ 16. Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated
  17. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0
  18. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1
- 19. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport
+ 19. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport
  20. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component
  21. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|bus_latch:PClatch
  22. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|genmux:PCmux
@@ -42,27 +42,28 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  34. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|reg:HIReg
  35. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|genmux4:HILOmux
  36. Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|genmux4:PCsourceMux
- 37. Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1
- 38. Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0
- 39. altsyncram Parameter Settings by Entity Instance
- 40. lpm_mult Parameter Settings by Entity Instance
- 41. Port Connectivity Checks: "ctrler:controller|datapath:dp|genmux4:PCsourceMux"
- 42. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:LOReg"
- 43. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:ALUoutReg"
- 44. Port Connectivity Checks: "ctrler:controller|datapath:dp|alu_ns:ALU"
- 45. Port Connectivity Checks: "ctrler:controller|datapath:dp|genmux4:input2mux"
- 46. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:registerB"
- 47. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:registerA"
- 48. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:MDR"
- 49. Port Connectivity Checks: "ctrler:controller|datapath:dp|bus_latch:PClatch"
- 50. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport"
- 51. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1"
- 52. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0"
- 53. Port Connectivity Checks: "ctrler:controller|datapath:dp"
- 54. Port Connectivity Checks: "ctrler:controller"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 37. Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0
+ 38. Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1
+ 39. Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. lpm_mult Parameter Settings by Entity Instance
+ 42. Port Connectivity Checks: "ctrler:controller|datapath:dp|genmux4:PCsourceMux"
+ 43. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:LOReg"
+ 44. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:ALUoutReg"
+ 45. Port Connectivity Checks: "ctrler:controller|datapath:dp|alu_ns:ALU"
+ 46. Port Connectivity Checks: "ctrler:controller|datapath:dp|genmux4:input2mux"
+ 47. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:registerB"
+ 48. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:registerA"
+ 49. Port Connectivity Checks: "ctrler:controller|datapath:dp|reg:MDR"
+ 50. Port Connectivity Checks: "ctrler:controller|datapath:dp|bus_latch:PClatch"
+ 51. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport"
+ 52. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1"
+ 53. Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0"
+ 54. Port Connectivity Checks: "ctrler:controller|datapath:dp"
+ 55. Port Connectivity Checks: "ctrler:controller"
+ 56. Post-Synthesis Netlist Statistics for Top Partition
+ 57. Elapsed Time Per Partition
+ 58. Analysis & Synthesis Messages
 
 
 
@@ -88,19 +89,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 01 17:12:26 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 01 19:05:36 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Project                                     ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4,044                                       ;
-;     Total combinational functions  ; 2,984                                       ;
-;     Dedicated logic registers      ; 1,293                                       ;
-; Total registers                    ; 1293                                        ;
+; Total logic elements               ; 4,057                                       ;
+;     Total combinational functions  ; 2,964                                       ;
+;     Dedicated logic registers      ; 1,325                                       ;
+; Total registers                    ; 1325                                        ;
 ; Total pins                         ; 45                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
-; Embedded Multiplier 9-bit elements ; 16                                          ;
+; Embedded Multiplier 9-bit elements ; 18                                          ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
@@ -206,7 +207,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -237,15 +238,16 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_klr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_klr3.tdf                   ;         ;
-; testcase7.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/18.0/4712/Project/testcase7.mif                            ;         ;
+; db/altsyncram_f2r3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_f2r3.tdf                   ;         ;
+; gcd.mif                          ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/18.0/4712/Project/gcd.mif                                  ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc          ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_qgs.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/mult_qgs.tdf                          ;         ;
 ; db/mult_tns.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/mult_tns.tdf                          ;         ;
+; db/mult_qgs.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/mult_qgs.tdf                          ;         ;
+; db/mult_uns.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/mult_uns.tdf                          ;         ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
@@ -254,31 +256,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,044     ;
+; Estimated Total logic elements              ; 4,057     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2984      ;
+; Total combinational functions               ; 2964      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2204      ;
-;     -- 3 input functions                    ; 645       ;
-;     -- <=2 input functions                  ; 135       ;
+;     -- 4 input functions                    ; 2199      ;
+;     -- 3 input functions                    ; 644       ;
+;     -- <=2 input functions                  ; 121       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2693      ;
+;     -- normal mode                          ; 2673      ;
 ;     -- arithmetic mode                      ; 291       ;
 ;                                             ;           ;
-; Total registers                             ; 1293      ;
-;     -- Dedicated logic registers            ; 1293      ;
+; Total registers                             ; 1325      ;
+;     -- Dedicated logic registers            ; 1325      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 45        ;
 ; Total memory bits                           ; 8192      ;
 ;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 16        ;
+; Embedded Multiplier 9-bit elements          ; 18        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1325      ;
-; Total fan-out                               ; 16611     ;
-; Average fan-out                             ; 3.76      ;
+; Maximum fan-out                             ; 1357      ;
+; Total fan-out                               ; 16689     ;
+; Average fan-out                             ; 3.77      ;
 +---------------------------------------------+-----------+
 
 
@@ -287,26 +289,28 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name     ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                         ; 2984 (2)            ; 1293 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
-;    |ctrler:controller|                             ; 2982 (25)           ; 1293 (13)                 ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
-;       |datapath:dp|                                ; 2957 (5)            ; 1280 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
-;          |ALUcontroller:alucard|                   ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
-;          |Memory:Memmy|                            ; 124 (74)            ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
+; |top_level                                         ; 2964 (2)            ; 1325 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
+;    |ctrler:controller|                             ; 2962 (32)           ; 1325 (13)                 ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
+;       |datapath:dp|                                ; 2930 (6)            ; 1312 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
+;          |ALUcontroller:alucard|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
+;          |Memory:Memmy|                            ; 103 (85)            ; 32 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
 ;             |LARams:Rammy|                         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy                                                                ; LARams          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;                   |altsyncram_klr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_klr3:auto_generated ; altsyncram_klr3 ; work         ;
+;                   |altsyncram_f2r3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated ; altsyncram_f2r3 ; work         ;
 ;             |bus_latch:Inport0|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Inport1|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1                                                           ; bus_latch       ; work         ;
-;             |bus_latch:Outputport|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport                                                        ; bus_latch       ; work         ;
-;          |alu_ns:ALU|                              ; 1117 (946)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
+;             |reg:Outputport|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport                                                              ; reg             ; work         ;
+;          |alu_ns:ALU|                              ; 1113 (942)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
+;             |lpm_mult:Mult0_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0                                                          ; lpm_mult        ; work         ;
+;                |mult_uns:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0|mult_uns:auto_generated                                  ; mult_uns        ; work         ;
 ;             |lpm_mult:Mult0|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0                                                                ; lpm_mult        ; work         ;
 ;                |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0|mult_tns:auto_generated                                        ; mult_tns        ; work         ;
 ;             |lpm_mult:Mult1|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1                                                                ; lpm_mult        ; work         ;
 ;                |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1|mult_qgs:auto_generated                                        ; mult_qgs        ; work         ;
 ;          |bus_latch:PClatch|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|bus_latch:PClatch                                                                        ; bus_latch       ; work         ;
-;          |genmux4:PCsourceMux|                     ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
-;          |genmux4:input2mux|                       ; 56 (56)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
-;          |genmux:PCmux|                            ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
+;          |genmux4:PCsourceMux|                     ; 64 (64)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
+;          |genmux4:input2mux|                       ; 53 (53)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
+;          |genmux:PCmux|                            ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
 ;          |genmux:WRdataMux|                        ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux                                                                         ; genmux          ; work         ;
 ;          |genmux:WRregMux|                         ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRregMux                                                                          ; genmux          ; work         ;
 ;          |genmux:input1mux|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:input1mux                                                                         ; genmux          ; work         ;
@@ -317,18 +321,18 @@ refer to the applicable agreement for further details.
 ;          |reg:MDR|                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:MDR                                                                                  ; reg             ; work         ;
 ;          |reg:registerA|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerA                                                                            ; reg             ; work         ;
 ;          |reg:registerB|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerB                                                                            ; reg             ; work         ;
-;          |registerfile:reggiefile|                 ; 1429 (1429)         ; 1056 (1056)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile                                                                  ; registerfile    ; work         ;
+;          |registerfile:reggiefile|                 ; 1427 (1427)         ; 1056 (1056)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile                                                                  ; registerfile    ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                          ;
-+-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
-; Name                                                                                                                              ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF           ;
-+-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
-; ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_klr3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; TestCase7.mif ;
-+-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                                                              ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; GCD.mif ;
++-----------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
 
 
 +-----------------------------------------------------+
@@ -337,11 +341,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
 ; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 8           ;
+; Simple Multipliers (18-bit)           ; 9           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 16          ;
+; Embedded Multiplier 9-bit elements    ; 18          ;
 ; Signed Embedded Multipliers           ; 1           ;
-; Unsigned Embedded Multipliers         ; 5           ;
+; Unsigned Embedded Multipliers         ; 6           ;
 ; Mixed Sign Embedded Multipliers       ; 2           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
 ; Dedicated Input Shift Register Chains ; 0           ;
@@ -359,116 +363,84 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|ctrler:controller|state                                                                                                                                                                                                                ;
-+----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
-; Name                 ; state.jumpComplete ; state.branchComplete ; state.branchAddr ; state.rWrite ; state.rComplete ; state.exec ; state.readComplete ; state.memAccessW ; state.memAccessR ; state.memAddr ; state.iDecode ; state.iFetchInc ; state.iFetchRead ;
-+----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
-; state.iFetchRead     ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 0                ;
-; state.iFetchInc      ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 1               ; 1                ;
-; state.iDecode        ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 1             ; 0               ; 1                ;
-; state.memAddr        ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 1             ; 0             ; 0               ; 1                ;
-; state.memAccessR     ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 1                ; 0             ; 0             ; 0               ; 1                ;
-; state.memAccessW     ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 1                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.readComplete   ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 1                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.exec           ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 1          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.rComplete      ; 0                  ; 0                    ; 0                ; 0            ; 1               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.rWrite         ; 0                  ; 0                    ; 0                ; 1            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.branchAddr     ; 0                  ; 0                    ; 1                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.branchComplete ; 0                  ; 1                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-; state.jumpComplete   ; 1                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0                ; 0             ; 0             ; 0               ; 1                ;
-+----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+------------------+---------------+---------------+-----------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|ctrler:controller|state                                                                                                                                                                                                               ;
++----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+----------------+----------------+---------------+-----------------+------------------+
+; Name                 ; state.jumpComplete ; state.branchComplete ; state.branchAddr ; state.rWrite ; state.rComplete ; state.exec ; state.readComplete ; state.memAccessR ; state.memAddrR ; state.memAddrW ; state.iDecode ; state.iFetchInc ; state.iFetchRead ;
++----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+----------------+----------------+---------------+-----------------+------------------+
+; state.iFetchRead     ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 0                ;
+; state.iFetchInc      ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 1               ; 1                ;
+; state.iDecode        ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 1             ; 0               ; 1                ;
+; state.memAddrW       ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 1              ; 0             ; 0               ; 1                ;
+; state.memAddrR       ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 1              ; 0              ; 0             ; 0               ; 1                ;
+; state.memAccessR     ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 1                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.readComplete   ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 1                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.exec           ; 0                  ; 0                    ; 0                ; 0            ; 0               ; 1          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.rComplete      ; 0                  ; 0                    ; 0                ; 0            ; 1               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.rWrite         ; 0                  ; 0                    ; 0                ; 1            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.branchAddr     ; 0                  ; 0                    ; 1                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.branchComplete ; 0                  ; 1                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
+; state.jumpComplete   ; 1                  ; 0                    ; 0                ; 0            ; 0               ; 0          ; 0                  ; 0                ; 0              ; 0              ; 0             ; 0               ; 1                ;
++----------------------+--------------------+----------------------+------------------+--------------+-----------------+------------+--------------------+------------------+----------------+----------------+---------------+-----------------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                              ;
-+--------------------------------------------------------------------------+--------------------------------------------------------------+------------------------+
-; Latch Name                                                               ; Latch Enable Signal                                          ; Free of Timing Hazards ;
-+--------------------------------------------------------------------------+--------------------------------------------------------------+------------------------+
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[0]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[1]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[2]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[3]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[4]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[5]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[6]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[7]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[8]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[9]  ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[10] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[11] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[12] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[13] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[14] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[15] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[16] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[17] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[18] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[19] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[20] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[21] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[22] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[23] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[24] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[25] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[26] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[27] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[28] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[29] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[30] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport|DATA[31] ; ctrler:controller|datapath:dp|Memory:Memmy|Outport_addr_true ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[3]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[2]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[1]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[9]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[8]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[7]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[6]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[5]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[4]                  ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[10]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[11]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[14]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[13]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[12]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[15]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[16]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[30]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[29]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[28]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[27]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[26]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[25]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[24]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[23]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[22]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[21]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[20]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[19]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[18]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[17]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[31]                 ; ctrler:controller|datapath:dp|PC_en                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[4]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[4]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[1]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[1]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[2]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[2]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[5]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[5]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[3]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[3]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[0]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[0]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[6]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[6]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[7]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[7]     ; en1                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[8]     ; en2                                                          ; yes                    ;
-; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[8]     ; en1                                                          ; yes                    ;
-; Number of user-specified and inferred latches = 82                       ;                                                              ;                        ;
-+--------------------------------------------------------------------------+--------------------------------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                 ;
++----------------------------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                                           ; Latch Enable Signal                 ; Free of Timing Hazards ;
++----------------------------------------------------------------------+-------------------------------------+------------------------+
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[15]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[14]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[13]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[12]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[11]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[10]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[9]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[8]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[7]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[6]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[5]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[4]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[3]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[2]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[1]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0]              ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[16]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[18]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[17]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[19]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[20]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[21]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[22]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[23]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[24]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[27]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[26]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[25]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[31]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[30]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[29]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[28]             ; ctrler:controller|datapath:dp|PC_en ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[3] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[3] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[8] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[8] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[7] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[7] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[6] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[6] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[5] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[5] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[4] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[4] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[2] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[2] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[1] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[1] ; en1                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1|DATA[0] ; en2                                 ; yes                    ;
+; ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0|DATA[0] ; en1                                 ; yes                    ;
+; Number of user-specified and inferred latches = 50                   ;                                     ;                        ;
++----------------------------------------------------------------------+-------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -518,12 +490,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1293  ;
+; Total registers                              ; 1325  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1165  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1152  ;
+; Number of registers using Clock Enable       ; 1184  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -533,32 +505,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|regs[31][19] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|reg:HIReg|DATA[19]                   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data0[18] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data1[31] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|regs[31][14] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|reg:HIReg|DATA[4]                    ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data0[23] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile|rd_data1[11] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|ctrler:controller|state                                            ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux|Y[16]              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux|Y[0]               ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux|Y[5]               ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[2]              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[1]             ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[24]            ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux|Y[14]              ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[1]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[0]             ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux|Y[25]            ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level|ctrler:controller|ALUSrcB[1]                                       ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux|Y[15]               ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level|ctrler:controller|state                                            ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 24 LEs               ; 120 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[28]             ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard|OpSelect[4]    ;
-; 67:1               ; 8 bits    ; 352 LEs       ; 80 LEs               ; 272 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[15]                ;
-; 68:1               ; 7 bits    ; 315 LEs       ; 77 LEs               ; 238 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[19]                ;
-; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[7]                 ;
-; 69:1               ; 4 bits    ; 184 LEs       ; 48 LEs               ; 136 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[25]                ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 24 LEs               ; 120 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|dataOut[24]             ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard|OpSelect[1]    ;
+; 67:1               ; 8 bits    ; 352 LEs       ; 80 LEs               ; 272 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[9]                 ;
+; 68:1               ; 7 bits    ; 315 LEs       ; 77 LEs               ; 238 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[17]                ;
+; 68:1               ; 4 bits    ; 180 LEs       ; 44 LEs               ; 136 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[4]                 ;
+; 69:1               ; 4 bits    ; 184 LEs       ; 48 LEs               ; 136 LEs                ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[24]                ;
 ; 69:1               ; 2 bits    ; 92 LEs        ; 24 LEs               ; 68 LEs                 ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[2]                 ;
-; 70:1               ; 2 bits    ; 92 LEs        ; 24 LEs               ; 68 LEs                 ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[29]                ;
+; 70:1               ; 2 bits    ; 92 LEs        ; 24 LEs               ; 68 LEs                 ; No         ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|output[28]                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_klr3:auto_generated ;
+; Source assignments for ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                              ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
@@ -586,13 +559,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -639,7 +612,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                  ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                  ;
-; INIT_FILE                          ; TestCase7.mif        ; Untyped                                                                  ;
+; INIT_FILE                          ; GCD.mif              ; Untyped                                                                  ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                  ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                           ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                  ;
@@ -652,7 +625,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                           ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                                                  ;
-; CBXI_PARAMETER                     ; altsyncram_klr3      ; Untyped                                                                  ;
+; CBXI_PARAMETER                     ; altsyncram_f2r3      ; Untyped                                                                  ;
 +------------------------------------+----------------------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -818,41 +791,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1 ;
-+------------------------------------------------+----------+----------------------------------------------+
-; Parameter Name                                 ; Value    ; Type                                         ;
-+------------------------------------------------+----------+----------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                               ;
-; LPM_WIDTHA                                     ; 32       ; Untyped                                      ;
-; LPM_WIDTHB                                     ; 32       ; Untyped                                      ;
-; LPM_WIDTHP                                     ; 64       ; Untyped                                      ;
-; LPM_WIDTHR                                     ; 64       ; Untyped                                      ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                                      ;
-; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                      ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                                      ;
-; LATENCY                                        ; 0        ; Untyped                                      ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                      ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                      ;
-; USE_EAB                                        ; OFF      ; Untyped                                      ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                      ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                      ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                      ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                          ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                      ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                      ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                      ;
-; CBXI_PARAMETER                                 ; mult_qgs ; Untyped                                      ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                      ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                      ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                      ;
-+------------------------------------------------+----------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0 ;
 +------------------------------------------------+----------+----------------------------------------------+
 ; Parameter Name                                 ; Value    ; Type                                         ;
@@ -887,6 +825,76 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1 ;
++------------------------------------------------+----------+----------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                         ;
++------------------------------------------------+----------+----------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                               ;
+; LPM_WIDTHA                                     ; 32       ; Untyped                                      ;
+; LPM_WIDTHB                                     ; 32       ; Untyped                                      ;
+; LPM_WIDTHP                                     ; 64       ; Untyped                                      ;
+; LPM_WIDTHR                                     ; 64       ; Untyped                                      ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                      ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                      ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                      ;
+; LATENCY                                        ; 0        ; Untyped                                      ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                      ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                      ;
+; USE_EAB                                        ; OFF      ; Untyped                                      ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                      ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                      ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                      ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                          ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                      ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                      ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                      ;
+; CBXI_PARAMETER                                 ; mult_qgs ; Untyped                                      ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                      ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                      ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                      ;
++------------------------------------------------+----------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0 ;
++------------------------------------------------+----------+----------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                               ;
++------------------------------------------------+----------+----------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                     ;
+; LPM_WIDTHA                                     ; 16       ; Untyped                                            ;
+; LPM_WIDTHB                                     ; 16       ; Untyped                                            ;
+; LPM_WIDTHP                                     ; 32       ; Untyped                                            ;
+; LPM_WIDTHR                                     ; 32       ; Untyped                                            ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                            ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                                            ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                            ;
+; LATENCY                                        ; 0        ; Untyped                                            ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                            ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                            ;
+; USE_EAB                                        ; OFF      ; Untyped                                            ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped                                            ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                            ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                            ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                                ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                            ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                            ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                            ;
+; CBXI_PARAMETER                                 ; mult_uns ; Untyped                                            ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                            ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                            ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                            ;
++------------------------------------------------+----------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                                    ;
 +-------------------------------------------+-----------------------------------------------------------------------------------------+
@@ -907,35 +915,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                                  ;
-+---------------------------------------+---------------------------------------------------------+
-; Name                                  ; Value                                                   ;
-+---------------------------------------+---------------------------------------------------------+
-; Number of entity instances            ; 2                                                       ;
-; Entity Instance                       ; ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 32                                                      ;
-;     -- LPM_WIDTHB                     ; 32                                                      ;
-;     -- LPM_WIDTHP                     ; 64                                                      ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                                  ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                      ;
-;     -- USE_EAB                        ; OFF                                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                      ;
-; Entity Instance                       ; ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 32                                                      ;
-;     -- LPM_WIDTHB                     ; 32                                                      ;
-;     -- LPM_WIDTHP                     ; 64                                                      ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                      ;
-;     -- USE_EAB                        ; OFF                                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                      ;
-+---------------------------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                        ;
++---------------------------------------+---------------------------------------------------------------+
+; Name                                  ; Value                                                         ;
++---------------------------------------+---------------------------------------------------------------+
+; Number of entity instances            ; 3                                                             ;
+; Entity Instance                       ; ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0       ;
+;     -- LPM_WIDTHA                     ; 32                                                            ;
+;     -- LPM_WIDTHB                     ; 32                                                            ;
+;     -- LPM_WIDTHP                     ; 64                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1       ;
+;     -- LPM_WIDTHA                     ; 32                                                            ;
+;     -- LPM_WIDTHB                     ; 32                                                            ;
+;     -- LPM_WIDTHP                     ; 64                                                            ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0 ;
+;     -- LPM_WIDTHA                     ; 16                                                            ;
+;     -- LPM_WIDTHB                     ; 16                                                            ;
+;     -- LPM_WIDTHP                     ; 32                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
++---------------------------------------+---------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -1024,13 +1043,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Outputport"                                                                            ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                                ;
++------+-------+----------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1076,27 +1095,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 1293                        ;
+; cycloneiii_ff         ; 1325                        ;
 ;     CLR               ; 109                         ;
-;     ENA               ; 96                          ;
+;     ENA               ; 128                         ;
 ;     ENA CLR           ; 1056                        ;
 ;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 2984                        ;
+; cycloneiii_lcell_comb ; 2964                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2693                        ;
+;     normal            ; 2673                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 93                          ;
-;         3 data inputs ; 392                         ;
-;         4 data inputs ; 2204                        ;
-; cycloneiii_mac_mult   ; 8                           ;
-; cycloneiii_mac_out    ; 8                           ;
+;         2 data inputs ; 79                          ;
+;         3 data inputs ; 391                         ;
+;         4 data inputs ; 2199                        ;
+; cycloneiii_mac_mult   ; 9                           ;
+; cycloneiii_mac_out    ; 9                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 27.00                       ;
-; Average LUT depth     ; 9.16                        ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 8.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1105,7 +1124,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:31     ;
 +----------------+--------------+
 
 
@@ -1115,7 +1134,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 01 17:11:51 2018
+    Info: Processing started: Sat Dec 01 19:04:44 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1181,7 +1200,7 @@ Warning (10540): VHDL Signal Declaration warning at ctrler.vhd(29): used explici
 Info (12129): Elaborating entity "datapath" using architecture "A:logic" for hierarchy "ctrler:controller|datapath:dp" File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 37
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(107): object "isIType" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 107
 Info (12128): Elaborating entity "Memory" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 112
-Info (12128): Elaborating entity "bus_latch" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0" File: C:/intelFPGA_lite/18.0/4712/Project/Memory.vhd Line: 46
+Info (12128): Elaborating entity "bus_latch" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0" File: C:/intelFPGA_lite/18.0/4712/Project/Memory.vhd Line: 53
 Warning (10631): VHDL Process Statement warning at bus_latch.vhd(21): inferring latch(es) for signal or variable "DATA", which holds its previous value in one or more paths through the process File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
 Info (10041): Inferred latch for "DATA[0]" at bus_latch.vhd(21) File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
 Info (10041): Inferred latch for "DATA[1]" at bus_latch.vhd(21) File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
@@ -1215,7 +1234,8 @@ Info (10041): Inferred latch for "DATA[28]" at bus_latch.vhd(21) File: C:/intelF
 Info (10041): Inferred latch for "DATA[29]" at bus_latch.vhd(21) File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
 Info (10041): Inferred latch for "DATA[30]" at bus_latch.vhd(21) File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
 Info (10041): Inferred latch for "DATA[31]" at bus_latch.vhd(21) File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-Info (12128): Elaborating entity "LARams" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy" File: C:/intelFPGA_lite/18.0/4712/Project/Memory.vhd Line: 75
+Info (12128): Elaborating entity "reg" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport" File: C:/intelFPGA_lite/18.0/4712/Project/Memory.vhd Line: 65
+Info (12128): Elaborating entity "LARams" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy" File: C:/intelFPGA_lite/18.0/4712/Project/Memory.vhd Line: 84
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.0/4712/Project/LARams.vhd Line: 61
 Info (12130): Elaborated megafunction instantiation "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.0/4712/Project/LARams.vhd Line: 61
 Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/18.0/4712/Project/LARams.vhd Line: 61
@@ -1239,7 +1259,7 @@ Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|Memory:Me
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "TestCase7.mif"
+    Info (12134): Parameter "init_file" = "GCD.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -1269,11 +1289,10 @@ Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|Memory:Me
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_klr3.tdf
-    Info (12023): Found entity 1: altsyncram_klr3 File: C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_klr3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_klr3" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_klr3:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_f2r3.tdf
+    Info (12023): Found entity 1: altsyncram_f2r3 File: C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_f2r3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_f2r3" for hierarchy "ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "genmux" for hierarchy "ctrler:controller|datapath:dp|genmux:PCmux" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 131
-Info (12128): Elaborating entity "reg" for hierarchy "ctrler:controller|datapath:dp|reg:IR" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 138
 Info (12128): Elaborating entity "genmux" for hierarchy "ctrler:controller|datapath:dp|genmux:WRregMux" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 152
 Info (12128): Elaborating entity "registerfile" for hierarchy "ctrler:controller|datapath:dp|registerfile:reggiefile" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 164
 Info (12128): Elaborating entity "signextend" for hierarchy "ctrler:controller|datapath:dp|signextend:signextender" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 176
@@ -1283,22 +1302,10 @@ Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(25): object "notsig" 
 Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(26): object "norsig" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 26
 Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(30): object "nandsig" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 30
 Info (12128): Elaborating entity "ALUcontroller" for hierarchy "ctrler:controller|datapath:dp|ALUcontroller:alucard" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 215
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult1" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
+Info (278001): Inferred 3 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult0" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
-Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1" with the following parameter: File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
-    Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "32"
-    Info (12134): Parameter "LPM_WIDTHP" = "64"
-    Info (12134): Parameter "LPM_WIDTHR" = "64"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qgs.tdf
-    Info (12023): Found entity 1: mult_qgs File: C:/intelFPGA_lite/18.0/4712/Project/db/mult_qgs.tdf Line: 30
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult1" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult0~0" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 74
 Info (12130): Elaborated megafunction instantiation "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 74
 Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0" with the following parameter: File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 74
     Info (12134): Parameter "LPM_WIDTHA" = "32"
@@ -1312,17 +1319,47 @@ Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|alu_ns:AL
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tns.tdf
     Info (12023): Found entity 1: mult_tns File: C:/intelFPGA_lite/18.0/4712/Project/db/mult_tns.tdf Line: 30
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12130): Elaborated megafunction instantiation "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
+Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1" with the following parameter: File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qgs.tdf
+    Info (12023): Found entity 1: mult_qgs File: C:/intelFPGA_lite/18.0/4712/Project/db/mult_qgs.tdf Line: 30
+Info (12130): Elaborated megafunction instantiation "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0"
+Info (12133): Instantiated megafunction "ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_uns.tdf
+    Info (12023): Found entity 1: mult_uns File: C:/intelFPGA_lite/18.0/4712/Project/db/mult_uns.tdf Line: 28
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 470 buffer(s)
     Info (13019): Ignored 470 SOFT buffer(s)
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[3] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|datapath:dp|reg:IR|DATA[1] File: C:/intelFPGA_lite/18.0/4712/Project/reg.vhd Line: 25
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[2] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|datapath:dp|reg:IR|DATA[0] File: C:/intelFPGA_lite/18.0/4712/Project/reg.vhd Line: 25
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[1] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.iFetchInc File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.iFetchInc File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[15] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[14] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[13] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[12] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[11] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[10] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[9] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[8] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
@@ -1334,26 +1371,32 @@ Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[6] h
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[5] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|datapath:dp|reg:IR|DATA[3] File: C:/intelFPGA_lite/18.0/4712/Project/reg.vhd Line: 25
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[4] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|datapath:dp|reg:IR|DATA[2] File: C:/intelFPGA_lite/18.0/4712/Project/reg.vhd Line: 25
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[10] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[11] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[3] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[14] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[2] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[13] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[12] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[15] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[1] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.iFetchInc File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[0] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.iFetchInc File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[16] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[30] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[18] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[29] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[17] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[28] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[19] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[20] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[21] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[22] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[23] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[24] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[27] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
@@ -1361,37 +1404,27 @@ Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[26] 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[25] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[24] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[23] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[22] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[21] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[20] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[19] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[18] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
-Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[17] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[31] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[31] File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[30] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[29] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[28] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4233 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4248 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 4140 logic cells
+    Info (21061): Implemented 4153 logic cells
     Info (21064): Implemented 32 RAM segments
-    Info (21062): Implemented 16 DSP elements
+    Info (21062): Implemented 18 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sat Dec 01 17:12:26 2018
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Sat Dec 01 19:05:36 2018
+    Info: Elapsed time: 00:00:52
+    Info: Total CPU time (on all processors): 00:01:03
 
 

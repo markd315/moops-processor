@@ -24,7 +24,7 @@ COMPONENT datapath
             OutPort   : out  std_logic_vector(31 downto 0));
 END COMPONENT ;
 
-TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddr, memAccessR, memAccessW, readComplete, exec, rComplete, rWrite, branchAddr, branchComplete, jumpComplete);  -- Define the states
+TYPE State_type IS (iFetchRead, iFetchInc, iDecode, memAddrW, memAddrR, memAccessR, readComplete, exec, rComplete, rWrite, branchAddr, branchComplete, jumpComplete);  -- Define the states
 	SIGNAL state : State_Type;    -- Create a signal that uses 
 signal PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemToReg, IRWrite, JumpAndLink, IsSigned, ALUSrcA, RegWrite, RegDst, HILO_clk : std_logic := '0';
 signal PCSource, ALUSrcB, ALUOp : std_logic_vector(1 downto 0) := "00";
@@ -79,7 +79,11 @@ case state is
  
 		WHEN iDecode => 
 			IF controllerIR(5)='1' THEN --msb implies sw/lw
-				state <= memAddr; 
+				IF controllerIR(3 downto 0)="0011" THEN --load 0011
+					state <= memAddrR;
+				ELSE
+					state <= memAddrW; --"1011"
+				END IF; 
 			ELSIF controllerIR(3)='1' THEN
 				state <= exec; --0x08 bit implies rType (immediate opcodes)
 			ELSIF controllerIR(5 downto 0)="000011" or controllerIR(5 downto 0)="000010" THEN
@@ -92,16 +96,12 @@ case state is
 				state <= branchAddr; --0x00 to 0x07 not covered yet
 			END IF; 
 			
-		WHEN memAddr => --0x2? is implied already
-			IF controllerIR(3 downto 0)="0011" THEN --load 0011
+			
+		WHEN memAddrW =>
+			state <= iFetchRead;	
+		WHEN memAddrR => --0x2? is implied already
 				state <= memAccessR;
-			ELSE
-				state <= readComplete; --"1011"
-			END IF; 
- 
 		WHEN memAccessR => 
-			state <= readComplete;
-		WHEN memAccessW => 
 			state <= readComplete;
 		WHEN exec => 
 			state <= rComplete;
@@ -122,16 +122,16 @@ case state is
 	END CASE; 
 end if;
 end process;
-MemRead <= '1' WHEN (state=iFetchRead or state=memAddr) ELSE '0';
-MemWrite <= '1' WHEN (state=memAccessW) ELSE '0';
-ALUSrcA <= '1' WHEN (state=memAddr or state=rComplete or state=branchComplete) ELSE '0';
+MemRead <= '1' WHEN (state=iFetchRead or state=memAddrR) ELSE '0';
+MemWrite <= '1' WHEN (state=memAddrW) ELSE '0';
+ALUSrcA <= '1' WHEN (state=memAddrR or state=memAddrW or state=rComplete or state=branchComplete) ELSE '0';
 ALUSrcB <= "01" WHEN (state=iFetchRead) ELSE 
 				"00" WHEN state=branchComplete ELSE
 				"10" WHEN (state=rComplete and isIType='1') ELSE 
-				"10" WHEN (state=memAddr or state=iDecode) ELSE
+				"10" WHEN (state=memAddrR or state=memAddrW or state=iDecode) ELSE
 				"11" WHEN (state=branchAddr) ELSE
 				"00";
-IorD <= '1' WHEN state=memAddr or state=iFetchInc ELSE '0';
+IorD <= '1' WHEN state=memAddrR or state=memAddrW or state=iFetchInc ELSE '0';
 IRWrite <= '1' WHEN (state=iFetchInc) ELSE '0';
 PCWrite <= '1' WHEN (state=iFetchInc or state=jumpComplete) ELSE '0';
 ALUOp <= "01" WHEN (state=branchComplete or state=branchAddr) ELSE "10" WHEN (state=rComplete) ELSE "00";

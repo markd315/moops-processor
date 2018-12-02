@@ -1,12 +1,12 @@
 
 State Machine - |top_level|ctrler:controller|state
-Name state.jumpComplete state.branchComplete state.branchAddr state.rWrite state.rComplete state.exec state.readComplete state.memAccessW state.memAccessR state.memAddr state.iDecode state.iFetchInc state.iFetchRead 
+Name state.jumpComplete state.branchComplete state.branchAddr state.rWrite state.rComplete state.exec state.readComplete state.memAccessR state.memAddrR state.memAddrW state.iDecode state.iFetchInc state.iFetchRead 
 state.iFetchRead 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.iFetchInc 0 0 0 0 0 0 0 0 0 0 0 1 1 
 state.iDecode 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.memAddr 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.memAccessR 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.memAccessW 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.memAddrW 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.memAddrR 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.memAccessR 0 0 0 0 0 0 0 1 0 0 0 0 1 
 state.readComplete 0 0 0 0 0 0 1 0 0 0 0 0 1 
 state.exec 0 0 0 0 0 1 0 0 0 0 0 0 1 
 state.rComplete 0 0 0 0 1 0 0 0 0 0 0 0 1 
