@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project
-Sat Dec 01 19:05:36 2018
+Tue Dec 04 17:41:45 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -89,16 +89,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 01 19:05:36 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 04 17:41:45 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Project                                     ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4,057                                       ;
-;     Total combinational functions  ; 2,964                                       ;
-;     Dedicated logic registers      ; 1,325                                       ;
-; Total registers                    ; 1325                                        ;
-; Total pins                         ; 45                                          ;
+; Total logic elements               ; 4,091                                       ;
+;     Total combinational functions  ; 3,006                                       ;
+;     Dedicated logic registers      ; 1,317                                       ;
+; Total registers                    ; 1317                                        ;
+; Total pins                         ; 87                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 18                                          ;
@@ -207,7 +207,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -240,6 +240,7 @@ refer to the applicable agreement for further details.
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_f2r3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/18.0/4712/Project/db/altsyncram_f2r3.tdf                   ;         ;
 ; gcd.mif                          ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/18.0/4712/Project/gcd.mif                                  ;         ;
+; decoder7seg.vhd                  ; yes             ; Auto-Found VHDL File                   ; C:/intelFPGA_lite/18.0/4712/Project/decoder7seg.vhd                          ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
@@ -256,31 +257,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,057     ;
+; Estimated Total logic elements              ; 4,091     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2964      ;
+; Total combinational functions               ; 3006      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2199      ;
-;     -- 3 input functions                    ; 644       ;
-;     -- <=2 input functions                  ; 121       ;
+;     -- 4 input functions                    ; 2256      ;
+;     -- 3 input functions                    ; 631       ;
+;     -- <=2 input functions                  ; 119       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2673      ;
+;     -- normal mode                          ; 2715      ;
 ;     -- arithmetic mode                      ; 291       ;
 ;                                             ;           ;
-; Total registers                             ; 1325      ;
-;     -- Dedicated logic registers            ; 1325      ;
+; Total registers                             ; 1317      ;
+;     -- Dedicated logic registers            ; 1317      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 45        ;
+; I/O pins                                    ; 87        ;
 ; Total memory bits                           ; 8192      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 18        ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1357      ;
-; Total fan-out                               ; 16689     ;
-; Average fan-out                             ; 3.77      ;
+; Maximum fan-out                             ; 1349      ;
+; Total fan-out                               ; 16902     ;
+; Average fan-out                             ; 3.72      ;
 +---------------------------------------------+-----------+
 
 
@@ -289,18 +290,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                               ; Entity Name     ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_level                                         ; 2964 (2)            ; 1325 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 45   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
-;    |ctrler:controller|                             ; 2962 (32)           ; 1325 (13)                 ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
-;       |datapath:dp|                                ; 2930 (6)            ; 1312 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
+; |top_level                                         ; 3006 (2)            ; 1317 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 87   ; 0            ; 0          ; |top_level                                                                                                                        ; top_level       ; work         ;
+;    |ctrler:controller|                             ; 2962 (30)           ; 1317 (13)                 ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller                                                                                                      ; ctrler          ; work         ;
+;       |datapath:dp|                                ; 2932 (6)            ; 1304 (0)                  ; 8192        ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp                                                                                          ; datapath        ; work         ;
 ;          |ALUcontroller:alucard|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|ALUcontroller:alucard                                                                    ; ALUcontroller   ; work         ;
-;          |Memory:Memmy|                            ; 103 (85)            ; 32 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
+;          |Memory:Memmy|                            ; 105 (87)            ; 24 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy                                                                             ; Memory          ; work         ;
 ;             |LARams:Rammy|                         ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy                                                                ; LARams          ; work         ;
 ;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;                   |altsyncram_f2r3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|LARams:Rammy|altsyncram:altsyncram_component|altsyncram_f2r3:auto_generated ; altsyncram_f2r3 ; work         ;
 ;             |bus_latch:Inport0|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport0                                                           ; bus_latch       ; work         ;
 ;             |bus_latch:Inport1|                    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|bus_latch:Inport1                                                           ; bus_latch       ; work         ;
-;             |reg:Outputport|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport                                                              ; reg             ; work         ;
-;          |alu_ns:ALU|                              ; 1113 (942)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
+;             |reg:Outputport|                       ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|Memory:Memmy|reg:Outputport                                                              ; reg             ; work         ;
+;          |alu_ns:ALU|                              ; 1119 (948)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU                                                                               ; alu_ns          ; work         ;
 ;             |lpm_mult:Mult0_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0                                                          ; lpm_mult        ; work         ;
 ;                |mult_uns:auto_generated|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0_rtl_0|mult_uns:auto_generated                                  ; mult_uns        ; work         ;
 ;             |lpm_mult:Mult0|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult0                                                                ; lpm_mult        ; work         ;
@@ -308,11 +309,11 @@ refer to the applicable agreement for further details.
 ;             |lpm_mult:Mult1|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1                                                                ; lpm_mult        ; work         ;
 ;                |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|alu_ns:ALU|lpm_mult:Mult1|mult_qgs:auto_generated                                        ; mult_qgs        ; work         ;
 ;          |bus_latch:PClatch|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|bus_latch:PClatch                                                                        ; bus_latch       ; work         ;
-;          |genmux4:PCsourceMux|                     ; 64 (64)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
-;          |genmux4:input2mux|                       ; 53 (53)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
-;          |genmux:PCmux|                            ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
+;          |genmux4:PCsourceMux|                     ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:PCsourceMux                                                                      ; genmux4         ; work         ;
+;          |genmux4:input2mux|                       ; 51 (51)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux4:input2mux                                                                        ; genmux4         ; work         ;
+;          |genmux:PCmux|                            ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:PCmux                                                                             ; genmux          ; work         ;
 ;          |genmux:WRdataMux|                        ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRdataMux                                                                         ; genmux          ; work         ;
-;          |genmux:WRregMux|                         ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRregMux                                                                          ; genmux          ; work         ;
+;          |genmux:WRregMux|                         ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:WRregMux                                                                          ; genmux          ; work         ;
 ;          |genmux:input1mux|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|genmux:input1mux                                                                         ; genmux          ; work         ;
 ;          |reg:ALUoutReg|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:ALUoutReg                                                                            ; reg             ; work         ;
 ;          |reg:HIReg|                               ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:HIReg                                                                                ; reg             ; work         ;
@@ -321,7 +322,13 @@ refer to the applicable agreement for further details.
 ;          |reg:MDR|                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:MDR                                                                                  ; reg             ; work         ;
 ;          |reg:registerA|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerA                                                                            ; reg             ; work         ;
 ;          |reg:registerB|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|reg:registerB                                                                            ; reg             ; work         ;
-;          |registerfile:reggiefile|                 ; 1427 (1427)         ; 1056 (1056)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile                                                                  ; registerfile    ; work         ;
+;          |registerfile:reggiefile|                 ; 1423 (1423)         ; 1056 (1056)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ctrler:controller|datapath:dp|registerfile:reggiefile                                                                  ; registerfile    ; work         ;
+;    |decoder7seg:decoder0|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder0                                                                                                   ; decoder7seg     ; work         ;
+;    |decoder7seg:decoder1|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder1                                                                                                   ; decoder7seg     ; work         ;
+;    |decoder7seg:decoder2|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder2                                                                                                   ; decoder7seg     ; work         ;
+;    |decoder7seg:decoder3|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder3                                                                                                   ; decoder7seg     ; work         ;
+;    |decoder7seg:decoder4|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder4                                                                                                   ; decoder7seg     ; work         ;
+;    |decoder7seg:decoder5|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:decoder5                                                                                                   ; decoder7seg     ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -490,12 +497,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1325  ;
+; Total registers                              ; 1317  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1165  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1184  ;
+; Number of registers using Clock Enable       ; 1176  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1079,14 +1086,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "ctrler:controller"    ;
-+----------------+-------+----------+--------------+
-; Port           ; Type  ; Severity ; Details      ;
-+----------------+-------+----------+--------------+
-; inport1[31..9] ; Input ; Info     ; Stuck at GND ;
-; inport2[31..9] ; Input ; Info     ; Stuck at GND ;
-+----------------+-------+----------+--------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrler:controller"                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; outport[31..24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inport1[31..9]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; inport2[31..9]  ; Input  ; Info     ; Stuck at GND                                                                        ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1094,28 +1102,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 1325                        ;
+; boundary_port         ; 87                          ;
+; cycloneiii_ff         ; 1317                        ;
 ;     CLR               ; 109                         ;
-;     ENA               ; 128                         ;
+;     ENA               ; 120                         ;
 ;     ENA CLR           ; 1056                        ;
 ;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 2964                        ;
+; cycloneiii_lcell_comb ; 3013                        ;
 ;     arith             ; 291                         ;
 ;         2 data inputs ; 38                          ;
 ;         3 data inputs ; 253                         ;
-;     normal            ; 2673                        ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 79                          ;
-;         3 data inputs ; 391                         ;
-;         4 data inputs ; 2199                        ;
+;     normal            ; 2722                        ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 378                         ;
+;         4 data inputs ; 2256                        ;
 ; cycloneiii_mac_mult   ; 9                           ;
 ; cycloneiii_mac_out    ; 9                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 8.76                        ;
+; Max LUT depth         ; 24.00                       ;
+; Average LUT depth     ; 8.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1124,7 +1132,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:31     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -1134,12 +1142,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 01 19:04:44 2018
+    Info: Processing started: Tue Dec 04 17:41:14 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project -c Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-tl File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 16
+    Info (12022): Found design unit 1: top_level-tl File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 22
     Info (12023): Found entity 1: top_level File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file genmux.vhd
     Info (12022): Found design unit 1: genmux-syn File: C:/intelFPGA_lite/18.0/4712/Project/genmux.vhd Line: 14
@@ -1195,7 +1203,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file top_lev
     Info (12022): Found design unit 1: top_level_tb-TB File: C:/intelFPGA_lite/18.0/4712/Project/top_level_tb.vhd Line: 8
     Info (12023): Found entity 1: top_level_tb File: C:/intelFPGA_lite/18.0/4712/Project/top_level_tb.vhd Line: 5
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "ctrler" for hierarchy "ctrler:controller" File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at top_level.vhd(18): used explicit default value for signal "output" because signal was never assigned a value File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+Info (12128): Elaborating entity "ctrler" for hierarchy "ctrler:controller" File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 49
 Warning (10540): VHDL Signal Declaration warning at ctrler.vhd(29): used explicit default value for signal "IsSigned" because signal was never assigned a value File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 29
 Info (12129): Elaborating entity "datapath" using architecture "A:logic" for hierarchy "ctrler:controller|datapath:dp" File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 37
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(107): object "isIType" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 107
@@ -1302,6 +1311,10 @@ Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(25): object "notsig" 
 Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(26): object "norsig" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 26
 Warning (10036): Verilog HDL or VHDL warning at alu_ns.vhd(30): object "nandsig" assigned a value but never read File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 30
 Info (12128): Elaborating entity "ALUcontroller" for hierarchy "ctrler:controller|datapath:dp|ALUcontroller:alucard" File: C:/intelFPGA_lite/18.0/4712/Project/datapath.vhd Line: 215
+Warning (12125): Using design file decoder7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: decoder7seg-BHV File: C:/intelFPGA_lite/18.0/4712/Project/decoder7seg.vhd Line: 10
+    Info (12023): Found entity 1: decoder7seg File: C:/intelFPGA_lite/18.0/4712/Project/decoder7seg.vhd Line: 4
+Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:decoder0" File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 51
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult0" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 74
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrler:controller|datapath:dp|alu_ns:ALU|Mult1" File: C:/intelFPGA_lite/18.0/4712/Project/alu_ns.vhd Line: 76
@@ -1412,19 +1425,77 @@ Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[29] 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
 Warning (13012): Latch ctrler:controller|datapath:dp|bus_latch:PClatch|DATA[28] has unsafe behavior File: C:/intelFPGA_lite/18.0/4712/Project/bus_latch.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ctrler:controller|state.jumpComplete File: C:/intelFPGA_lite/18.0/4712/Project/ctrler.vhd Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output[0]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[1]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[2]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[3]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[4]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[5]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[6]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[7]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[8]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[9]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[10]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[11]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[12]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[13]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[14]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[15]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[16]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[17]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[18]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[19]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[20]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[21]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[22]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[23]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[24]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[25]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[26]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[27]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[28]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[29]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[30]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
+    Warning (13410): Pin "output[31]" is stuck at GND File: C:/intelFPGA_lite/18.0/4712/Project/top_level.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 24 assignments for entity "controller" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity controller -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity controller -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4248 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4324 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 4153 logic cells
+    Info (21059): Implemented 74 output pins
+    Info (21061): Implemented 4187 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 18 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 140 warnings
     Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Sat Dec 01 19:05:36 2018
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Processing ended: Tue Dec 04 17:41:45 2018
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:42
 
 

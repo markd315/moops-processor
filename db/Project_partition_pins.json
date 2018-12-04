@@ -4,131 +4,171 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "output[0]",
+					"name" : "led0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[1]",
+					"name" : "led0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[2]",
+					"name" : "led0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[3]",
+					"name" : "led0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "output[4]",
+					"name" : "led0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "output[5]",
+					"name" : "led0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "output[6]",
+					"name" : "led0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "output[7]",
+					"name" : "led1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[8]",
+					"name" : "led1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[9]",
+					"name" : "led1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[10]",
+					"name" : "led1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "output[11]",
+					"name" : "led1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "output[12]",
+					"name" : "led1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "output[13]",
+					"name" : "led1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "output[14]",
+					"name" : "led2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[15]",
+					"name" : "led2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[16]",
+					"name" : "led2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[17]",
+					"name" : "led2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "output[18]",
+					"name" : "led2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "output[19]",
+					"name" : "led2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "output[20]",
+					"name" : "led2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "output[21]",
+					"name" : "led3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[22]",
+					"name" : "led3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[23]",
+					"name" : "led3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[24]",
+					"name" : "led3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "output[25]",
+					"name" : "led3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "output[26]",
+					"name" : "led3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "output[27]",
+					"name" : "led3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "output[28]",
+					"name" : "led4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[29]",
+					"name" : "led4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[30]",
+					"name" : "led4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[31]",
+					"name" : "led4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led5[6]",
 					"strict" : false
 				},
 				{
@@ -152,6 +192,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "input[4]",
+					"strict" : false
+				},
+				{
 					"name" : "input[5]",
 					"strict" : false
 				},
@@ -160,15 +204,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "input[4]",
-					"strict" : false
-				},
-				{
 					"name" : "input[1]",
-					"strict" : false
-				},
-				{
-					"name" : "input[0]",
 					"strict" : false
 				},
 				{
@@ -181,6 +217,10 @@
 				},
 				{
 					"name" : "input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
 					"strict" : false
 				}
 			]

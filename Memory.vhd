@@ -92,7 +92,8 @@ Rammy : LARams
 Outport_addr_true <= '1' when baddr=conv_std_logic_vector(16#0000FFFC#, baddr'length) else
 							'1' when baddr=conv_std_logic_vector(16#0000FFFD#, baddr'length) else
 							'1' when baddr=conv_std_logic_vector(16#0000FFFE#, baddr'length) else
-							'1' when baddr=conv_std_logic_vector(16#0000FFFF#, baddr'length)
+							'1' when baddr=conv_std_logic_vector(16#0000FFFF#, baddr'length) else
+							'1' when baddr=conv_std_logic_vector(16#00010000#, baddr'length)
 							else '0';
 				
 dataOut <= InPort0_out when baddr = conv_std_logic_vector(16#0000FFF8#, baddr'length) else
